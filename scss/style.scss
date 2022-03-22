@@ -1,0 +1,26 @@
+@import "set";
+@import "components";
+
+
+body {
+  background-image: url("../img/background.svg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+}

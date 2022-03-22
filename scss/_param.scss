@@ -1,0 +1,22 @@
+// $peremenaya: znachenie;
+
+// @mixin name {
+//  css here
+// }
+
+$default-color: #1B1B1B;
+$gray: #757988;
+$gray-light: #9EA3B6;
+$blue: #0E62C4;
+$red: #CD010C;
+
+@mixin title-font {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.58rem;
+
+  @media (max-width: 48em) {
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+}
