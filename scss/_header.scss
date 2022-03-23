@@ -56,6 +56,7 @@
 
         > path {
           fill: $gray-icon;
+          stroke: transparent;
         }
 
         mask,
@@ -188,7 +189,7 @@
     position: absolute;
     top: 4rem;
     left: -3rem;
-    z-index: 2;
+    z-index: 3;
     width: 42.5rem;
     padding: 3rem;
     border-radius: 3rem;
@@ -451,6 +452,7 @@
       height: 8.4rem;
       border: 0.4rem solid #E9EBF2;
       border-radius: 100%;
+      cursor: pointer;
     }
 
     &__burger-menu-btn {

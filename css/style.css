@@ -209,6 +209,7 @@ input[type=number] {
 }
 .header__link--mail > svg > path {
   fill: #9AA0B5;
+  stroke: transparent;
 }
 .header__link--mail > svg mask,
 .header__link--mail > svg rect {
@@ -340,7 +341,7 @@ input[type=number] {
   position: absolute;
   top: 4rem;
   left: -3rem;
-  z-index: 2;
+  z-index: 3;
   width: 42.5rem;
   padding: 3rem;
   border-radius: 3rem;
@@ -612,6 +613,7 @@ input[type=number] {
     height: 8.4rem;
     border: 0.4rem solid #E9EBF2;
     border-radius: 100%;
+    cursor: pointer;
   }
   .header__burger-menu-btn > div {
     position: relative;
@@ -664,6 +666,279 @@ input[type=number] {
   }
   .header__mobile-cart > svg path {
     stroke: black;
+  }
+}
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 39.4rem;
+}
+@media (max-width: 48em) {
+  body {
+    padding-bottom: 181.2rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5.5rem 0 3rem 0;
+  background-color: #fff;
+}
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3.5rem 0 3.5rem 3rem;
+}
+.footer__content:nth-child(2) {
+  border-top: 2px solid #C4C4C4;
+}
+.footer__logo {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: block;
+  width: 19.4rem;
+  height: 14.4rem;
+  margin-right: 12rem;
+}
+.footer__logo > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__list {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.footer__list--info {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+.footer__list-item {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+.footer__list-item:nth-child(n+2) {
+  margin-top: 3rem;
+}
+.footer__link {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+.footer__link--portal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__link--portal > svg {
+  width: 2.7rem;
+  height: 2.7rem;
+  margin-right: 1.1rem;
+}
+.footer__link--portal > svg path {
+  stroke: #CD010C;
+}
+.footer__link--phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 2.41rem;
+}
+.footer__link--phone > svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-left: 1.2rem;
+}
+.footer__link--phone > svg path {
+  stroke: #CD010C;
+}
+.footer__link--clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.6rem;
+  line-height: 2.03rem;
+}
+.footer__link--clock > svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-right: 1.1rem;
+}
+.footer__link--clock > svg path {
+  stroke: #9AA0B5;
+}
+.footer__link--mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer__link--mail > svg {
+  width: 2.1rem;
+  height: 2.3rem;
+  margin-right: 1.1rem;
+}
+.footer__link--mail > svg > path {
+  fill: #9AA0B5;
+}
+.footer__link--mail > svg mask,
+.footer__link--mail > svg rect {
+  width: 100%;
+  height: 100%;
+}
+.footer__link--underline {
+  text-decoration: underline;
+}
+.footer__text {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+
+@media (max-width: 48em) {
+  .footer {
+    padding: 2rem 0;
+  }
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    padding: 10rem 0;
+    text-align: center;
+  }
+  .footer__content:nth-child(2) {
+    border-top: 2px solid #C4C4C4;
+  }
+  .footer__logo {
+    width: 38.8rem;
+    height: 28.8rem;
+    margin: 0 auto;
+  }
+  .footer__list {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .footer__list:nth-child(n+2) {
+    margin-top: 6rem;
+  }
+  .footer__list--info {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-top: 10rem;
+  }
+  .footer__list-item {
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+  }
+  .footer__list-item:nth-child(n+2) {
+    margin-top: 6rem;
+  }
+  .footer__link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+  }
+  .footer__link--portal > svg {
+    width: 5.4rem;
+    height: 5.4rem;
+    margin-right: 2.2rem;
+  }
+  .footer__link--phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 500;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+  }
+  .footer__link--phone > span {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .footer__link--phone > svg {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 4.4rem;
+    height: 4.4rem;
+    margin-left: 0;
+    margin-right: 3.4rem;
+  }
+  .footer__link--phone > svg path {
+    stroke: #9AA0B5;
+  }
+  .footer__link--clock {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 500;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+  }
+  .footer__link--clock > svg {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin-right: 2.2rem;
+  }
+  .footer__link--mail {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: 500;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+  }
+  .footer__link--mail > svg {
+    width: 4.2rem;
+    height: 4.6rem;
+    margin-right: 2.2rem;
+  }
+  .footer__text {
+    margin-bottom: 4rem;
+    font-size: 3.3rem;
+    line-height: 4.6rem;
   }
 }
 body {
