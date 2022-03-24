@@ -17,6 +17,10 @@ const reviews_slider = new Swiper('.reviews__slider', {
     },
     autoplay: {
     },
+    on: {
+        slideChange: function () {
+        }
+    },
 });
 */
 
@@ -30,8 +34,6 @@ const rem = function (rem) {
     }
 }
 
-let intro_index = 0;
-let x = 0;
 const main_intro_slider = new Swiper('.main-intro__slider', {
     direction: 'horizontal',
     // loop: true,
@@ -65,9 +67,58 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
         delay: 5000,
         disableOnInteraction: true,
     },
+});
+
+let offers_current_slide = $('.offers__current-slide');
+const offers_slider = new Swiper('.offers__slider', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: rem(4.6),
+        },
+        0: {
+            slidesPerView: 1.11,
+            spaceBetween: rem(1),
+        },
+    },
+
+    pagination: {
+        el: '.offers__pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.offers__arrow--right',
+        prevEl: '.offers__arrow--left',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
 
     on: {
         slideChange: function () {
-        }
-    }
+            if (offers_slider.activeIndex < 9) {
+                offers_current_slide.text('0' + (offers_slider.activeIndex + 1));
+            } else {
+                offers_current_slide.text(offers_slider.activeIndex + 1);
+            }
+        },
+    },
 });
+
+let offers_slides = $('.offers__pagination').find('.swiper-pagination-bullet').length;
+if (offers_slides < 10) {
+    $('.offers__total-slide').text('0' + offers_slides);
+} else {
+    $('.offers__total-slide').text(offers_slides);
+}
+if (offers_slider.activeIndex < 9) {
+    offers_current_slide.text('0' + (offers_slider.activeIndex + 1));
+} else {
+    offers_current_slide.text(offers_slider.activeIndex + 1);
+}

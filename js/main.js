@@ -11,12 +11,6 @@ $(document).ready(function () {
         $(this).toggleClass('open')
             .parent().find('.header__services-sub-list').slideToggle();
     });
-    $('.header__about-menu-btn > svg').click(function () {
-        $('.header__services-menu-name').removeClass('open')
-            .parent().find('.header__services-list').slideUp();
-        $(this).parent().toggleClass('open')
-            .parent().find('.header__about-list').slideToggle();
-    });
 
     // main-intro анимация картинок
 });
