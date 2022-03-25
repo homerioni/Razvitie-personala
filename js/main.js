@@ -13,4 +13,13 @@ $(document).ready(function () {
     });
 
     // main-intro анимация картинок
+
+    // feedback custom checkbox
+    $('.feedback__label--checkbox').click(function () {
+        if ($(this).find('input').prop('checked')) {
+            $(this).addClass('check');
+        } else {
+            $(this).removeClass('check');
+        }
+    });
 });
