@@ -36,7 +36,6 @@ const rem = function (rem) {
 
 const main_intro_slider = new Swiper('.main-intro__slider', {
     direction: 'horizontal',
-    // loop: true,
     slidesPerView: 1,
 
     pagination: {
@@ -69,7 +68,6 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
     },
 });
 
-let offers_current_slide = $('.offers__current-slide');
 const offers_slider = new Swiper('.offers__slider', {
     direction: 'horizontal',
 
@@ -91,27 +89,19 @@ const offers_slider = new Swiper('.offers__slider', {
     },
 
     navigation: {
-        nextEl: '.offers__arrow--right',
-        prevEl: '.offers__arrow--left',
+        nextEl: '.offers__arrow-right',
+        prevEl: '.offers__arrow-left',
     },
 
     autoplay: {
         delay: 5000,
         disableOnInteraction: true,
     },
-
-    on: {
-        slideChange: function () {
-            if (offers_slider.activeIndex < 9) {
-                offers_current_slide.text('0' + (offers_slider.activeIndex + 1));
-            } else {
-                offers_current_slide.text(offers_slider.activeIndex + 1);
-            }
-        },
-    },
 });
 
-let offers_slides = $('.offers__pagination').find('.swiper-pagination-bullet').length;
+let offers_current_slide = $('.offers__current-slide'),
+    offers_slides = $('.offers__pagination').find('.swiper-pagination-bullet').length;
+
 if (offers_slides < 10) {
     $('.offers__total-slide').text('0' + offers_slides);
 } else {
@@ -122,3 +112,66 @@ if (offers_slider.activeIndex < 9) {
 } else {
     offers_current_slide.text(offers_slider.activeIndex + 1);
 }
+
+offers_slider.on('slideChange', function () {
+    if (offers_slider.activeIndex < 9) {
+        offers_current_slide.text('0' + (offers_slider.activeIndex + 1));
+    } else {
+        offers_current_slide.text(offers_slider.activeIndex + 1);
+    }
+});
+
+
+
+const reviews_slider = new Swiper('.reviews__slider', {
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: rem(4.6),
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2.5,
+        },
+        0: {
+            slidesPerView: 1,
+        },
+    },
+
+    pagination: {
+        el: '.reviews__pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.reviews__arrow-right',
+        prevEl: '.reviews__arrow-left',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+});
+
+let reviews_current_slide = $('.reviews__current-slide'),
+    reviews_slides = $('.reviews__pagination').find('.swiper-pagination-bullet').length;
+
+if (reviews_slides < 10) {
+    $('.reviews__total-slide').text('0' + reviews_slides);
+} else {
+    $('.reviews__total-slide').text(reviews_slides);
+}
+if (reviews_slider.realIndex < 9) {
+    reviews_current_slide.text('0' + (reviews_slider.realIndex + 1));
+} else {
+    reviews_current_slide.text(reviews_slider.realIndex + 1);
+}
+
+reviews_slider.on('slideChange', function () {
+    if (reviews_slider.realIndex < 9) {
+        reviews_current_slide.text('0' + (reviews_slider.realIndex + 1));
+    } else {
+        reviews_current_slide.text(reviews_slider.realIndex + 1);
+    }
+});

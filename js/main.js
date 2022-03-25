@@ -22,4 +22,9 @@ $(document).ready(function () {
             $(this).removeClass('check');
         }
     });
+
+    // reviews rating block
+    let rating = Number($('.reviews__average-rating').attr('rating')).toFixed(1); //Беру значение и округляю до 1 знака после запятой
+    $('.reviews__rating-number').text(rating.slice(0, 1) + ',' + rating.slice(-1)); //Вставляю в текст оценку
+    $('.reviews__rating-icons-full').css('width', Math.trunc(rating) * 20 + 4 + Number(rating.slice(-1)) / 10 * 12 + '%'); //Высчитываю ширину для коректного отображения звезд
 });
