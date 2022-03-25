@@ -1,29 +1,3 @@
-/*
-const reviews_slider = new Swiper('.reviews__slider', {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 50,
-    breakpoints: {
-        0: {},
-    },
-    pagination: {
-        el: '',
-        type: '',
-    },
-    navigation: {
-        nextEl: '',
-        prevEl: '',
-    },
-    autoplay: {
-    },
-    on: {
-        slideChange: function () {
-        }
-    },
-});
-*/
-
 // Пересчет rem в px для swiper
 const rem = function (rem) {
     if ($(window).width() > 768) {
@@ -173,5 +147,64 @@ reviews_slider.on('slideChange', function () {
         reviews_current_slide.text('0' + (reviews_slider.realIndex + 1));
     } else {
         reviews_current_slide.text(reviews_slider.realIndex + 1);
+    }
+});
+
+
+
+const partners_slider = new Swiper('.partners__slider', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        768: {
+            slidesPerView: 4,
+            spaceBetween: rem(1),
+            grid: {
+                fill: 'row',
+                rows: 2,
+            }
+        },
+        0: {
+            slidesPerView: 1.13,
+            spaceBetween: rem(1),
+        },
+    },
+
+    pagination: {
+        el: '.partners__pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.partners__arrow-right',
+        prevEl: '.partners__arrow-left',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+});
+
+let partners_current_slide = $('.partners__current-slide'),
+    partners_slides = $('.partners__pagination').find('.swiper-pagination-bullet').length;
+
+if (partners_slides < 10) {
+    $('.partners__total-slide').text('0' + partners_slides);
+} else {
+    $('.partners__total-slide').text(partners_slides);
+}
+if (partners_slider.activeIndex < 9) {
+    partners_current_slide.text('0' + (partners_slider.activeIndex + 1));
+} else {
+    partners_current_slide.text(partners_slider.activeIndex + 1);
+}
+
+partners_slider.on('slideChange', function () {
+    if (partners_slider.activeIndex < 9) {
+        partners_current_slide.text('0' + (partners_slider.activeIndex + 1));
+    } else {
+        partners_current_slide.text(partners_slider.activeIndex + 1);
     }
 });
