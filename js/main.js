@@ -23,6 +23,9 @@ $(document).ready(function () {
         }
     });
 
+    // Маска для тедефона
+    $('.input-phone').mask('+7 (999) 999-99-99');
+
     // reviews rating block
     let rating = Number($('.reviews__average-rating').attr('rating')).toFixed(1); //Беру значение и округляю до 1 знака после запятой
     $('.reviews__rating-number').text(rating.slice(0, 1) + ',' + rating.slice(-1)); //Вставляю в текст оценку

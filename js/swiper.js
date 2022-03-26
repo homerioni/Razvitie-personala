@@ -162,7 +162,7 @@ const partners_slider = new Swiper('.partners__slider', {
             grid: {
                 fill: 'row',
                 rows: 2,
-            }
+            },
         },
         0: {
             slidesPerView: 1.13,
@@ -174,6 +174,7 @@ const partners_slider = new Swiper('.partners__slider', {
         el: '.partners__pagination',
         type: 'bullets',
         clickable: true,
+        dynamicBullets: true,
     },
 
     navigation: {

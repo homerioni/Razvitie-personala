@@ -50,6 +50,15 @@
   &__navigation-block {
     justify-content: space-between;
   }
+
+  &__pagination {
+    display: block;
+    margin: 0 0 0 5rem;
+  }
+
+  &__total-slide {
+    margin-left: -3rem;
+  }
 }
 
 @media (max-width: 48em) {
@@ -99,6 +108,14 @@
 
     &__navigation-block {
       justify-content: space-between;
+    }
+
+    &__pagination {
+      margin: 0 0 0 10rem;
+    }
+
+    &__total-slide {
+      margin-left: -6rem;
     }
   }
 }
