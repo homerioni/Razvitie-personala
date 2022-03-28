@@ -1,60 +1,40 @@
 @import "../param";
 
-.reviews {
-  position: relative;
+.all-reviews {
   margin-bottom: 20rem;
-  margin-top: 30rem;
-
-  &__bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    width: 110rem;
-    height: 75%;
-    background-color: #fff;
-  }
 
   &__title-content {
-    margin-bottom: 12rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11.5rem;
+  }
+
+  &__text-block {
+    width: 72rem;
   }
 
   &__sub-title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.8rem;
     line-height: 2.7rem;
   }
 
   &__title {
+    margin-bottom: 2.5rem;
     @include title-font;
   }
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6rem;
-  }
-
-  &__info-block {
-    flex: none;
-    width: 58rem;
-    margin-right: 11rem;
-  }
-
   &__text {
-    margin-bottom: 6rem;
     font-size: 1.8rem;
     line-height: 2.7rem;
   }
 
   &__rating-block {
-    display: flex;
-    margin-bottom: 5rem;
   }
 
   &__rating-box {
     &:first-child {
-      margin-right: 5.5rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -122,55 +102,34 @@
     }
   }
 
-  &__link {
+  &__cards {
     display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.9rem;
-    color: $red;
-
-    > svg {
-      width: 1rem;
-      height: 1.6rem;
-      margin-left: 1.5rem;
-
-      path {
-        stroke: $red;
-        fill: $red;
-      }
-    }
-  }
-
-  &__slider {
-    min-height: 45rem;
-    margin-right: -24.5rem;
-    margin-top: -31rem;
-    padding-top: 31rem;
-  }
-
-  &__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__item {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 68.7rem;
+    min-height: 30rem;
     height: auto;
-    margin-top: -12rem;
+    padding-right: 5.6rem;
     border-radius: 0 6rem;
     background-color: #D3D6E1;
-    text-align: center;
+
+    &:nth-child(n + 3) {
+      margin-top: 10rem;
+    }
   }
 
   &__item-bg {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 100%;
-    height: 15rem;
-    transform: translateX(-50%);
+    left: 4rem;
+    width: 30rem;
+    height: 26rem;
 
     > img {
       width: 100%;
@@ -181,10 +140,10 @@
   }
 
   &__item-img-box {
-    position: relative;
-    width: 100%;
-    height: 37rem;
-    margin-top: -19rem;
+    flex: none;
+    width: 36.9rem;
+    height: 40rem;
+    margin-top: -10rem;
 
     > img {
       width: 100%;
@@ -193,8 +152,10 @@
     }
   }
 
+  &__item-text-block {
+  }
+
   &__item-title {
-    width: 29rem;
     margin-bottom: 1.7rem;
     font-weight: 600;
     font-size: 2.5rem;
@@ -202,8 +163,6 @@
   }
 
   &__item-text {
-    width: 29rem;
-    margin-bottom: 9rem;
     font-size: 1.8rem;
     line-height: 2.7rem;
   }
@@ -236,78 +195,45 @@
       }
     }
   }
-
-  &__navigation-block {
-    justify-content: flex-end;
-  }
-
-  &__current-slide {
-  }
-
-  &__pagination {
-  }
-
-  &__total-slide {
-  }
-
-  &__arrow-left {
-  }
-
-  &__arrow-right {
-  }
 }
 
 @media (max-width: 48em) {
-  .reviews {
+  .all-reviews {
     margin-bottom: 32rem;
-    padding-bottom: 10rem;
-
-    &__bg {
-      width: 100% ;
-      height: 120rem;
-    }
 
     &__title-content {
-      margin-bottom: 2rem;
+      flex-direction: column;
+      justify-content: normal;
+      margin-bottom: 45rem;
+    }
+
+    &__text-block {
+      width: 100%;
     }
 
     &__sub-title {
       margin-bottom: 2rem;
-      font-weight: 300;
-      font-size: 3.4rem;
-      line-height: 5rem;
-    }
-
-    &__title {
-      @include title-font;
-    }
-
-    &__content {
-      flex-direction: column;
-      justify-content: normal;
-      margin-bottom: 10rem;
-    }
-
-    &__info-block {
-      order: 2;
-      width: 100%;
-      margin-right: 0;
-    }
-
-    &__text {
-      margin-bottom: 10rem;
       font-size: 3.4rem;
       line-height: 4.3rem;
     }
 
+    &__title {
+      margin-bottom: 6rem;
+    }
+
+    &__text {
+      font-size: 3.6rem;
+      line-height: 5.4rem;
+    }
+
     &__rating-block {
+      display: flex;
       justify-content: space-between;
-      margin-bottom: 10rem;
     }
 
     &__rating-box {
       &:first-child {
-        margin-right: 11rem;
+        margin-bottom: 0;
       }
     }
 
@@ -320,7 +246,7 @@
 
     &__total-feedback {
       font-size: 5rem;
-      line-height: 7.4rem;
+      line-height: 7.5rem;
     }
 
     &__average-rating {
@@ -351,52 +277,52 @@
       }
     }
 
-    &__link {
-      font-size: 3rem;
-      line-height: 3.8rem;
-
-      > svg {
-        width: 2rem;
-        height: 3.2rem;
-        margin-left: 3rem;
-        margin-top: 0.6rem;
-      }
-    }
-
-    &__slider {
-      order: 1;
-      min-height: 45rem;
-      margin: 0 0 15rem 0;
-      padding-top: 38rem;
-    }
-
-    &__wrapper {
+    &__cards {
     }
 
     &__item {
-      margin-top: 0;
+      flex-direction: column;
+      align-items: normal;
+      width: 100%;
+      min-height: 90rem;
+      padding-right: 0;
       border-radius: 0 12rem;
+      text-align: center;
+
+      &:nth-child(n + 2) {
+        margin-top: 42rem;
+      }
     }
 
     &__item-bg {
-      height: 30rem;
+      left: 50%;
+      width: 60rem;
+      height: 35rem;
+      transform: translateX(-50%);
+      border-radius: 0 1.6rem 0 0;
+      overflow: hidden;
     }
 
     &__item-img-box {
-      height: 74rem;
-      margin-top: -38rem;
+      width: 75rem;
+      height: 75rem;
+      margin-top: -37.5rem;
+      margin-bottom: 3rem;
+    }
+
+    &__item-text-block {
+      width: 57.6rem;
+      margin: 0 auto;
     }
 
     &__item-title {
-      width: 58rem;
       margin-bottom: 3.4rem;
       font-size: 5rem;
       line-height: 7.4rem;
     }
 
     &__item-text {
-      width: 58rem;
-      margin-bottom: 18rem;
+      margin-bottom: 17.6rem;
       font-size: 3.6rem;
       line-height: 5.4rem;
     }
@@ -404,6 +330,7 @@
     &__item-link {
       width: 34rem;
       height: 11rem;
+      padding-left: 4rem;
       border-radius: 20rem 0 0 0;
       font-size: 3rem;
       line-height: 3.8rem;
@@ -413,25 +340,6 @@
         height: 3.2rem;
         margin-left: 2.8rem;
       }
-    }
-
-    &__navigation-block {
-      justify-content: space-between;
-    }
-
-    &__current-slide {
-    }
-
-    &__pagination {
-    }
-
-    &__total-slide {
-    }
-
-    &__arrow-left {
-    }
-
-    &__arrow-right {
     }
   }
 }

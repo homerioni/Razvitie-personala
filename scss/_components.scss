@@ -1,5 +1,41 @@
 @import "param";
 
+.page-pagination {
+  margin: 4.5rem 0;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__page {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+
+    &--old {
+      color: $gray;
+    }
+
+    &--current {
+      color: $red;
+    }
+  }
+
+  &__arrow {
+    width: 1rem;
+    height: 1.6rem;
+    margin: 0 1.8rem;
+
+    path {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+}
+
 .whatsapp-btn {
   position: fixed;
   right: 10rem;
@@ -109,6 +145,25 @@
 }
 
 @media (max-width: 48em) {
+  .page-pagination {
+    margin: 6rem 0;
+
+    &__container {
+    }
+
+    &__page {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+
+    &__arrow {
+      width: 2rem;
+      height: 3.2rem;
+      margin: 0 3.6rem 2rem 3.6rem;
+    }
+  }
+
   .navigation-block {
     justify-content: space-between;
 
