@@ -16,10 +16,10 @@
 @import "about/about-intro";
 @import "about/boss";
 @import "about/about-numbers";
+@import "about/about-content";
 
 @import "all-reviews/all-reviews";
-
-@import "review/review-page";
+@import "all-reviews/review-page";
 
 body {
   background-image: url("../img/background.svg");
