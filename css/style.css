@@ -4598,6 +4598,132 @@ body {
     margin-left: 2.8rem;
   }
 }
+.review-page {
+  margin-bottom: 20rem;
+}
+.review-page__title {
+  margin-bottom: 5rem;
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.58rem;
+}
+@media (max-width: 48em) {
+  .review-page__title {
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+}
+.review-page__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.review-page__image-block {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 40rem;
+  height: 40rem;
+  margin-right: 2rem;
+}
+.review-page__img-box {
+  width: 100%;
+  height: 100%;
+}
+.review-page__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.review-page__img-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.review-page__img-bg > img {
+  width: 90%;
+  height: 90%;
+}
+.review-page__text {
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+}
+
+@media (max-width: 48em) {
+  .review-page {
+    margin-bottom: 32rem;
+  }
+  .review-page__title {
+    margin-bottom: 6rem;
+  }
+  .review-page__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .review-page__image-block {
+    width: 100%;
+    height: 75rem;
+    margin-right: 2rem;
+  }
+  .review-page__img-box {
+    position: relative;
+    z-index: 3;
+    width: calc(100% + 8rem);
+    height: 90rem;
+    margin: -10rem -4rem 0 -4rem;
+  }
+  .review-page__img-box > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .review-page__img-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .review-page__img-bg > img {
+    width: 90%;
+    height: 90%;
+  }
+  .review-page__text {
+    font-size: 3.4rem;
+    line-height: 5.1rem;
+  }
+}
 body {
   background-image: url("../img/background.svg");
   background-size: cover;
