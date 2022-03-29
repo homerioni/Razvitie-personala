@@ -47,4 +47,10 @@ $(document).ready(function () {
         });
         $('.calculate__input-range-value').text($(this).val());
     });
+
+    // about-content text limited
+    $('.about-content__next').click(function () {
+        $(this).css('display', 'none')
+            .parent().find('article').css('display', 'block');
+    });
 });

@@ -8,6 +8,13 @@
     @include title-font;
   }
 
+  &__sub-title {
+    margin-bottom: 5rem;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
   &__text {
     font-size: 2.5rem;
     line-height: 3.8rem;
@@ -23,6 +30,26 @@
     &--gray {
       color: $gray-light;
     }
+
+    &--link {
+      text-decoration: underline;
+      color: $red;
+    }
+  }
+
+  &__list {
+    > li {
+      margin-left: 4rem;
+      margin-bottom: 0.5rem;
+      list-style-type: disc;
+
+      &::marker {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__next {
   }
 }
 
@@ -30,8 +57,26 @@
   .about-content {
     margin-bottom: 32rem;
 
+    &--limited {
+      position: relative;
+
+      > article {
+        display: -webkit-box;
+        -webkit-line-clamp: 20;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
     &__title {
       margin-bottom: 6rem;
+    }
+
+    &__sub-title {
+      margin-bottom: 8rem;
+      font-size: 5rem;
+      line-height: 7.5rem;
     }
 
     &__text {
@@ -41,6 +86,27 @@
       &:nth-child(n + 2) {
         margin-top: 6rem;
       }
+    }
+
+    &__list {
+      > li {
+        margin-left: 6rem;
+        margin-bottom: 0;
+
+        &::marker {
+          font-size: 3.4rem;
+        }
+      }
+    }
+
+    &__next {
+      position: absolute;
+      left: 4rem;
+      bottom: -10rem;
+      margin-top: 6rem;
+      text-decoration: underline;
+      color: $red;
+      cursor: pointer;
     }
   }
 }

@@ -152,9 +152,13 @@
     }
 
     &__page {
+      max-width: 54rem;
       margin-bottom: 2rem;
       font-size: 3rem;
       line-height: 3.8rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     &__arrow {
