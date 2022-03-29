@@ -4468,6 +4468,185 @@ body {
     line-height: 4.3rem;
   }
 }
+.partner-stages {
+  margin-bottom: 20rem;
+}
+.partner-stages__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15rem;
+}
+.partner-stages__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32.1rem;
+  height: auto;
+  padding: 0 5rem 3.5rem 5rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: #D3D6E1;
+}
+.partner-stages__item:first-child {
+  border-radius: 0 6rem;
+}
+.partner-stages__item:last-child {
+  border-radius: 6rem 0;
+}
+.partner-stages__item:last-child > .partner-stages__item-bg-line {
+  display: none;
+}
+.partner-stages__item:nth-child(even) > .partner-stages__item-bg-line {
+  top: auto;
+  bottom: -5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.partner-stages__item-bg-line {
+  position: absolute;
+  top: -5rem;
+  right: -65%;
+  z-index: -1;
+}
+.partner-stages__item-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 7.5rem;
+  height: 4.3rem;
+  margin-top: -2rem;
+  margin-bottom: 2.3rem;
+  border-radius: 100rem;
+  background-color: #0E62C4;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: white;
+}
+.partner-stages__item-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 2.5rem;
+}
+.partner-stages__item-icon path {
+  fill: #CD010C;
+}
+.partner-stages__item-icon--stroke path {
+  fill: none;
+  stroke: #CD010C;
+}
+.partner-stages__item-title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+}
+.partner-stages__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 29.7rem;
+  height: 6rem;
+  margin: 0 auto;
+  border-radius: 3rem 0 0 0;
+  background-color: #0E62C4;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+.partner-stages__btn > svg {
+  width: 2.6rem;
+  height: 1.6rem;
+  margin-left: 3.8rem;
+}
+.partner-stages__btn > svg path {
+  stroke: white;
+}
+
+@media (max-width: 48em) {
+  .partner-stages {
+    margin-bottom: 32rem;
+  }
+  .partner-stages__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    margin-bottom: 10rem;
+  }
+  .partner-stages__item {
+    width: 100%;
+    min-height: 44rem;
+    padding: 0 10rem 7rem 10rem;
+    border-radius: 6rem 6rem 0 0;
+    background-color: #D3D6E1;
+  }
+  .partner-stages__item:first-child {
+    border-radius: 0 12rem;
+  }
+  .partner-stages__item:last-child {
+    border-radius: 12rem 0;
+  }
+  .partner-stages__item:nth-child(n+2) {
+    margin-top: 10rem;
+  }
+  .partner-stages__item-number {
+    width: 15rem;
+    height: 8.6rem;
+    margin-top: -4rem;
+    margin-bottom: 6.6rem;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+  }
+  .partner-stages__item-icon {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 5rem;
+  }
+  .partner-stages__item-title {
+    font-size: 4.4rem;
+    line-height: 5.5rem;
+  }
+  .partner-stages__btn {
+    width: 59.4rem;
+    height: 12rem;
+    border-radius: 6rem 0 0 0;
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+  }
+  .partner-stages__btn > svg {
+    width: 5.2rem;
+    height: 3.2rem;
+    margin-left: 7.6rem;
+  }
+}
 .all-reviews {
   margin-bottom: 20rem;
 }
