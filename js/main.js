@@ -31,4 +31,20 @@ $(document).ready(function () {
     $('.rating-number').text(rating.slice(0, 1) + ',' + rating.slice(-1)); //Вставляю в текст оценку
     $('.rating-icons-full').css('width', Math.trunc(rating) * 20 + 4 + Number(rating.slice(-1)) / 10 * 12 + '%'); //Высчитываю ширину для коректного отображения звезд
 
+    // calculate cтилизация input-range
+    let input_range = $('.calculate__input--range');
+    $('.calculate__input-range-value').text(input_range.val());
+    input_range.css({
+        '--value': input_range.val(),
+        '--min': input_range.attr('min'),
+        '--max': input_range.attr('max'),
+    });
+    $(document).on('input change', '.calculate__input--range', function() {
+        $(this).css({
+            '--value': $(this).val(),
+            '--min': $(this).attr('min'),
+            '--max': $(this).attr('max'),
+        });
+        $('.calculate__input-range-value').text($(this).val());
+    });
 });
