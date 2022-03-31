@@ -644,7 +644,7 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   width: 2rem;
-  height: 1.5rem;
+  height: 1.6rem;
   margin-right: 2.7rem;
 }
 .header__services-burger > div {
@@ -3447,12 +3447,10 @@ body {
 }
 .partners__pagination {
   display: block;
-  margin: 0 0 0 5rem;
+  margin: 0 1rem;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
 }
-.partners__total-slide {
-  margin-left: -3rem;
-}
-
 @media (max-width: 48em) {
   .partners {
     margin-bottom: 32rem;
@@ -3511,10 +3509,7 @@ body {
             justify-content: space-between;
   }
   .partners__pagination {
-    margin: 0 0 0 10rem;
-  }
-  .partners__total-slide {
-    margin-left: -6rem;
+    margin: 0;
   }
 }
 .contacts {
@@ -4286,6 +4281,9 @@ body {
 .about-content__text--link {
   text-decoration: underline;
   color: #CD010C;
+}
+.about-content__text--block {
+  display: block;
 }
 .about-content__list > li {
   margin-left: 4rem;
@@ -5912,6 +5910,486 @@ body {
   .train-req__btn > svg {
     width: 1.8rem;
     height: 3.2rem;
+  }
+}
+.services {
+  margin-bottom: 20rem;
+}
+.services__title {
+  margin-bottom: 6rem;
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.58rem;
+}
+@media (max-width: 48em) {
+  .services__title {
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+}
+.services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services__nav-block {
+  width: 41.5rem;
+}
+.services__services-menu {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.services__services-menu-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  border-bottom: 1px solid #C7CBDA;
+}
+.services__services-menu-name.open .services__services-burger > div {
+  opacity: 0;
+}
+.services__services-menu-name.open .services__services-burger:before {
+  top: calc(50% - 1px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.services__services-menu-name.open .services__services-burger:after {
+  bottom: calc(50% - 1px);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.services__services-burger {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2rem;
+  height: 1.6rem;
+  margin-right: 2.7rem;
+}
+.services__services-burger > div {
+  width: 100%;
+  height: 2px;
+  background-color: #CD010C;
+  opacity: 1;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.services__services-burger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #CD010C;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.services__services-burger:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #CD010C;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.services__services-item {
+  padding: 3rem 0;
+  border-bottom: 1px solid #C7CBDA;
+}
+.services__services-item-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  cursor: pointer;
+}
+.services__services-item-name > svg {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 1.6rem;
+  height: 1rem;
+  margin-top: 1rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.services__services-item-name > svg path {
+  fill: #CD010C;
+  stroke: #CD010C;
+}
+.services__services-item-name.open > svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.services__services-sub-list {
+  display: none;
+  padding-left: 3rem;
+}
+.services__services-sub-item {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #757988;
+}
+.services__filter-block {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+.services__filter-name {
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+.services__label-range {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.services__input-range-value {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+}
+.services__input-range {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 2px + var(--ratio) * (100% - 2px));
+}
+.services__input-range::-webkit-slider-runnable-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CD010C), to(#CD010C)) 0/var(--sx) 100% no-repeat, #C7CBDA;
+  background: linear-gradient(#CD010C, #CD010C) 0/var(--sx) 100% no-repeat, #C7CBDA;
+}
+.services__input-range::-webkit-slider-thumb {
+  background: #CD010C;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 1.8rem;
+  height: 1.8rem;
+  -webkit-appearance: none;
+  margin-top: -0.8rem;
+}
+.services__input-range::-moz-range-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  background: linear-gradient(#CD010C, #CD010C) 0/var(--sx) 100% no-repeat, #C7CBDA;
+}
+.services__input-range::-moz-range-thumb {
+  background: #CD010C;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 1.8rem;
+  height: 1.8rem;
+  -webkit-appearance: none;
+  margin-top: -0.8rem;
+}
+.services__range-min-max-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: #757988;
+}
+.services__cards-block {
+  width: 96.6rem;
+}
+.services__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services__cards:nth-child(n+2) {
+  margin-top: 7rem;
+}
+.services__cards-title {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.8rem;
+}
+.services__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 47.8rem;
+  min-height: 22.4rem;
+  height: auto;
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 3rem;
+  background-color: #fff;
+}
+.services__item:nth-child(n+3) {
+  margin-top: 1rem;
+}
+.services__img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 20rem;
+  height: 18rem;
+  margin-right: 1rem;
+}
+.services__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.services__item-title {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.services__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #757988;
+}
+.services__item-link > svg {
+  width: 0.9rem;
+  height: 1.6rem;
+  margin-left: 1rem;
+}
+.services__item-link > svg path {
+  fill: #757988;
+  stroke: #757988;
+}
+.services__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 11.7rem;
+  height: 5.5rem;
+  border-radius: 10rem 0 6rem 0;
+  background-color: #0E62C4;
+}
+.services__btn > svg {
+  width: 2.6rem;
+  height: 2.7rem;
+}
+.services__btn > svg path {
+  stroke: white;
+}
+
+@media (max-width: 48em) {
+  .services {
+    margin-bottom: 32rem;
+  }
+  .services__title {
+    margin-bottom: 6rem;
+  }
+  .services__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .services__nav-block {
+    width: 100%;
+    margin-bottom: 10rem;
+  }
+  .services__services-menu {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  .services__services-menu-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 12rem;
+    padding-bottom: 0;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    border-bottom: none;
+    border-radius: 12rem 0 20rem 12rem;
+    background-color: #fff;
+    cursor: pointer;
+    -webkit-transition: 0.15s ease;
+    transition: 0.15s ease;
+  }
+  .services__services-menu-name.open {
+    border-radius: 8rem 0 0 0;
+    border-bottom: 1px solid #C7CBDA;
+  }
+  .services__services-menu-name.open .services__services-burger > div {
+    opacity: 0;
+  }
+  .services__services-menu-name.open .services__services-burger:before {
+    top: calc(50% - 1px);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .services__services-menu-name.open .services__services-burger:after {
+    bottom: calc(50% - 1px);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .services__services-burger {
+    width: 4rem;
+    height: 3.2rem;
+    margin-right: 5.4rem;
+  }
+  .services__services-list {
+    display: none;
+  }
+  .services__services-item {
+    padding: 4rem 6rem 6rem 7.2rem;
+    background-color: #fff;
+  }
+  .services__services-item:last-child {
+    border-bottom: none;
+  }
+  .services__services-item-name {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+  .services__services-item-name > svg {
+    width: 3.2rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+  }
+  .services__services-sub-list {
+    padding-left: 6rem;
+  }
+  .services__services-sub-item {
+    margin-top: 3.4rem;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+  }
+  .services__filter-block {
+    display: none;
+  }
+  .services__cards-block {
+    width: 100%;
+  }
+  .services__cards:nth-child(n+2) {
+    margin-top: 16rem;
+  }
+  .services__cards-title {
+    margin-bottom: 6rem;
+    font-size: 5rem;
+    line-height: 6.3rem;
+  }
+  .services__item {
+    width: 100%;
+    min-height: 38rem;
+    padding: 2rem 4rem 4rem 2rem;
+    border-radius: 6rem;
+    background-color: #fff;
+  }
+  .services__item:nth-child(n+2) {
+    margin-top: 2rem;
+  }
+  .services__img-box {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 27rem;
+    height: 30rem;
+  }
+  .services__item-title {
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    line-height: 6.3rem;
+  }
+  .services__item-link {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .services__item-link > svg {
+    width: 1.8rem;
+    height: 3.2rem;
+    margin-left: 2rem;
+  }
+  .services__btn {
+    width: 17.2rem;
+    height: 8rem;
+    border-radius: 20rem 0 12rem 0;
+  }
+  .services__btn > svg {
+    width: 4rem;
+    height: 4rem;
   }
 }
 body {

@@ -35,6 +35,10 @@
       text-decoration: underline;
       color: $red;
     }
+
+    &--block {
+      display: block;
+    }
   }
 
   &__list {

@@ -27,6 +27,8 @@
 @import "documents/calculate";
 @import "documents/train-req";
 
+@import "services/services";
+
 body {
   background-image: url("../img/background.svg");
   background-size: cover;

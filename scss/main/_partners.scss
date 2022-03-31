@@ -53,11 +53,11 @@
 
   &__pagination {
     display: block;
-    margin: 0 0 0 5rem;
+    margin: 0 1rem;
+    transform: translateX(0) !important;
   }
 
   &__total-slide {
-    margin-left: -3rem;
   }
 }
 
@@ -111,11 +111,10 @@
     }
 
     &__pagination {
-      margin: 0 0 0 10rem;
+      margin: 0;
     }
 
     &__total-slide {
-      margin-left: -6rem;
     }
   }
 }
