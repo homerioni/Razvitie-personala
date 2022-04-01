@@ -3,6 +3,16 @@
 .courses {
   margin-bottom: 20rem;
 
+  &--watched {
+    .courses__title-text-block {
+      width: 100%;
+    }
+
+    .courses__image-block {
+      padding: 2rem;
+    }
+  }
+
   &__title-block {
     display: flex;
     justify-content: space-between;
@@ -48,6 +58,7 @@
   }
 
   &__item-number {
+    flex: none;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -212,7 +212,7 @@ partners_slider.on('slideChange', function () {
 
 
 
-const courses_slider = new Swiper('.courses__slider', {
+const courses_distance_slider = new Swiper('.courses__slider--distance', {
     direction: 'horizontal',
 
     breakpoints: {
@@ -227,14 +227,14 @@ const courses_slider = new Swiper('.courses__slider', {
     },
 
     pagination: {
-        el: '.courses__pagination',
+        el: '.courses__pagination--distance',
         type: 'bullets',
         clickable: true,
     },
 
     navigation: {
-        nextEl: '.courses__arrow-right',
-        prevEl: '.courses__arrow-left',
+        nextEl: '.courses__arrow-right--distance',
+        prevEl: '.courses__arrow-left--distance',
     },
 
     autoplay: {
@@ -243,25 +243,80 @@ const courses_slider = new Swiper('.courses__slider', {
     },
 });
 
-let courses_current_slide = $('.courses__current-slide'),
-    courses_slides = $('.courses__pagination').find('.swiper-pagination-bullet').length;
+let courses_distance_current_slide = $('.courses__current-slide--distance'),
+    courses_distance_slides = $('.courses__pagination--distance').find('.swiper-pagination-bullet').length;
 
-if (courses_slides < 10) {
-    $('.courses__total-slide').text('0' + courses_slides);
+if (courses_distance_slides < 10) {
+    $('.courses__total-slide--distance').text('0' + courses_distance_slides);
 } else {
-    $('.courses__total-slide').text(courses_slides);
+    $('.courses__total-slide--distance').text(courses_distance_slides);
 }
-if (courses_slider.activeIndex < 9) {
-    courses_current_slide.text('0' + (courses_slider.activeIndex + 1));
+if (courses_distance_slider.activeIndex < 9) {
+    courses_distance_current_slide.text('0' + (courses_distance_slider.activeIndex + 1));
 } else {
-    courses_current_slide.text(courses_slider.activeIndex + 1);
+    courses_distance_current_slide.text(courses_distance_slider.activeIndex + 1);
 }
 
-courses_slider.on('slideChange', function () {
-    if (courses_slider.activeIndex < 9) {
-        courses_current_slide.text('0' + (courses_slider.activeIndex + 1));
+courses_distance_slider.on('slideChange', function () {
+    if (courses_distance_slider.activeIndex < 9) {
+        courses_distance_current_slide.text('0' + (courses_distance_slider.activeIndex + 1));
     } else {
-        courses_current_slide.text(courses_slider.activeIndex + 1);
+        courses_distance_current_slide.text(courses_distance_slider.activeIndex + 1);
+    }
+});
+
+
+
+const courses_watched_slider = new Swiper('.courses__slider--watched', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: rem(4.4),
+        },
+        0: {
+            slidesPerView: 1.1,
+            spaceBetween: rem(2),
+        },
+    },
+
+    pagination: {
+        el: '.courses__pagination--watched',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.courses__arrow-right--watched',
+        prevEl: '.courses__arrow-left--watched',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+});
+
+let courses_watched_current_slide = $('.courses__current-slide--watched'),
+    courses_watched_slides = $('.courses__pagination--watched').find('.swiper-pagination-bullet').length;
+
+if (courses_watched_slides < 10) {
+    $('.courses__total-slide--watched').text('0' + courses_watched_slides);
+} else {
+    $('.courses__total-slide--watched').text(courses_watched_slides);
+}
+if (courses_watched_slider.activeIndex < 9) {
+    courses_watched_current_slide.text('0' + (courses_watched_slider.activeIndex + 1));
+} else {
+    courses_watched_current_slide.text(courses_watched_slider.activeIndex + 1);
+}
+
+courses_watched_slider.on('slideChange', function () {
+    if (courses_watched_slider.activeIndex < 9) {
+        courses_watched_current_slide.text('0' + (courses_watched_slider.activeIndex + 1));
+    } else {
+        courses_watched_current_slide.text(courses_watched_slider.activeIndex + 1);
     }
 });
 
