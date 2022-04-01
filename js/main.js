@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
     // custom checkbox
-    $('.label--checkbox').click(function () {
+    $('.label-checkbox').click(function () {
         if ($(this).find('input').prop('checked')) {
             $(this).addClass('check');
         } else {

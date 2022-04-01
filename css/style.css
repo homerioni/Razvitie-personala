@@ -5351,13 +5351,13 @@ body {
 .calculate {
   margin-bottom: 20rem;
 }
-.calculate__content-block {
+.calculate__form {
   padding: 5rem 7rem;
   border: 1rem solid #fff;
   border-radius: 4rem;
   background-color: #E9EBF2;
 }
-.calculate__form {
+.calculate__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5367,8 +5367,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.calculate__form--calculate {
-  margin-bottom: 12rem;
+.calculate__block:nth-child(n+2) {
+  margin-top: 12rem;
 }
 .calculate__title {
   width: 100%;
@@ -5377,26 +5377,24 @@ body {
   font-size: 4.4rem;
   line-height: 5.6rem;
 }
-.calculate__label {
+.calculate__item {
   position: relative;
   display: block;
   width: 60.5rem;
+  margin-bottom: 6rem;
 }
-.calculate__label--select {
-  margin-bottom: 5rem;
-}
-.calculate__label--select > svg {
+.calculate__label-select > svg {
   position: absolute;
   right: 2.5rem;
   top: 7.5rem;
   width: 1.6rem;
   height: 1rem;
 }
-.calculate__label--select > svg path {
+.calculate__label-select > svg path {
   fill: #CD010C;
   stroke: #CD010C;
 }
-.calculate__label--input {
+.calculate__label-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5405,18 +5403,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid #C7CBDA;
   margin-bottom: 3rem;
+  border-bottom: 2px solid #C7CBDA;
 }
-.calculate__label--input > svg {
+.calculate__label-input > svg {
   width: 2rem;
   height: 2rem;
   margin-right: 1.5rem;
 }
-.calculate__label--input > svg path {
+.calculate__label-input > svg path {
   fill: #B9BECD;
 }
-.calculate__label--checkbox {
+.calculate__label-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5428,8 +5426,20 @@ body {
   line-height: 2.7rem;
   cursor: pointer;
 }
-.calculate__label--checkbox.check .calculate__checkbox-check > svg {
+.calculate__label-checkbox.check .calculate__checkbox-check > svg {
   display: block;
+}
+.calculate__range-min-max-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  margin-top: 1rem;
+  color: #757988;
 }
 .calculate__input-name {
   width: 100%;
@@ -5492,25 +5502,7 @@ body {
   -webkit-appearance: none;
   margin-top: -0.8rem;
 }
-.calculate__input--range:before {
-  content: "1";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 300;
-  font-size: 1.6rem;
-  color: #757988;
-}
-.calculate__input--range:after {
-  content: "99";
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-weight: 300;
-  font-size: 1.6rem;
-  color: #757988;
-}
-.calculate__input--input {
+.calculate__input--text {
   width: 90%;
   font-weight: 600;
   font-size: 2.5rem;
@@ -5530,6 +5522,12 @@ body {
   line-height: 3.2rem;
 }
 .calculate__total-sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 2.5rem;
   line-height: 5.2rem;
 }
@@ -5539,10 +5537,8 @@ body {
   font-size: 3.2rem;
   line-height: 5.2rem;
 }
-.calculate__pay-option {
-  width: 60.5rem;
-}
 .calculate__pay-text {
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   line-height: 5.2rem;
 }
@@ -5550,11 +5546,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .calculate__img-box {
   width: 11.8rem;
   height: 8.8rem;
   margin-right: 2.5rem;
+}
+.calculate__img-box:nth-child(n+5) {
+  margin-top: 2.5rem;
+}
+.calculate__confirm-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
 }
 .calculate__btn {
   display: -webkit-box;
@@ -5618,49 +5632,44 @@ body {
   .calculate {
     margin-bottom: 32rem;
   }
-  .calculate__content-block {
+  .calculate__form {
     padding: 6rem;
     border: 2rem solid #fff;
     border-radius: 8rem;
   }
-  .calculate__form--calculate {
-    margin-bottom: 16rem;
+  .calculate__block:nth-child(n+2) {
+    margin-top: 16rem;
   }
   .calculate__title {
     margin-bottom: 6rem;
     font-size: 5rem;
     line-height: 6.3rem;
   }
-  .calculate__label {
+  .calculate__item {
     width: 100%;
     margin-bottom: 6rem;
   }
-  .calculate__label--select {
-    margin-bottom: 6rem;
-  }
-  .calculate__label--select > svg {
+  .calculate__label-select > svg {
     position: absolute;
     right: 0;
     top: 15.5rem;
     width: 3.2rem;
     height: 2rem;
   }
-  .calculate__label--range {
-    margin-bottom: 12rem;
-  }
-  .calculate__label--input {
-    margin-bottom: 6rem;
-  }
-  .calculate__label--input > svg {
+  .calculate__label-input > svg {
     width: 4rem;
     height: 4rem;
     margin-right: 3rem;
   }
-  .calculate__label--checkbox {
+  .calculate__label-checkbox {
     width: 100%;
     font-weight: 300;
     font-size: 3.4rem;
     line-height: 4.3rem;
+  }
+  .calculate__range-min-max-block {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
   }
   .calculate__input-name {
     font-size: 3.6rem;
@@ -5685,14 +5694,8 @@ body {
     height: 3.6rem;
     margin-top: -1.6rem;
   }
-  .calculate__input--range:before {
-    font-size: 3.2rem;
-  }
-  .calculate__input--range:after {
-    font-size: 3.2rem;
-  }
-  .calculate__input--input {
-    width: 50rem;
+  .calculate__input--text {
+    width: calc(100% - 7rem);
     font-size: 5rem;
     line-height: 10.4rem;
   }
@@ -5731,15 +5734,26 @@ body {
     font-size: 3.4rem;
     line-height: 4.3rem;
   }
-  .calculate__pay-image-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .calculate__img-box {
     width: 14.2rem;
     height: 10.6rem;
     margin-right: 3rem;
+  }
+  .calculate__img-box:nth-child(n+4) {
+    margin-top: 3rem;
+  }
+  .calculate__confirm-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    margin-top: 4rem;
   }
   .calculate__btn {
     width: 100%;
