@@ -209,3 +209,58 @@ partners_slider.on('slideChange', function () {
         partners_current_slide.text(partners_slider.activeIndex + 1);
     }
 });
+
+
+
+const courses_slider = new Swiper('.courses__slider', {
+    direction: 'horizontal',
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: rem(5),
+        },
+        0: {
+            slidesPerView: 1.1,
+            spaceBetween: rem(2),
+        },
+    },
+
+    pagination: {
+        el: '.courses__pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.courses__arrow-right',
+        prevEl: '.courses__arrow-left',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+});
+
+let courses_current_slide = $('.courses__current-slide'),
+    courses_slides = $('.courses__pagination').find('.swiper-pagination-bullet').length;
+
+if (courses_slides < 10) {
+    $('.courses__total-slide').text('0' + courses_slides);
+} else {
+    $('.courses__total-slide').text(courses_slides);
+}
+if (courses_slider.activeIndex < 9) {
+    courses_current_slide.text('0' + (courses_slider.activeIndex + 1));
+} else {
+    courses_current_slide.text(courses_slider.activeIndex + 1);
+}
+
+courses_slider.on('slideChange', function () {
+    if (courses_slider.activeIndex < 9) {
+        courses_current_slide.text('0' + (courses_slider.activeIndex + 1));
+    } else {
+        courses_current_slide.text(courses_slider.activeIndex + 1);
+    }
+});
