@@ -4,6 +4,12 @@
   margin-bottom: 20rem;
   margin-top: 12rem;
 
+  &--service {
+    .about-intro__title-content {
+      width: 82rem;
+    }
+  }
+
   &__info-block {
     display: flex;
     justify-content: space-between;
@@ -15,7 +21,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 65rem;
+    width: 70rem;
     height: fit-content;
   }
 
