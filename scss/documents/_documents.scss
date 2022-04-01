@@ -157,6 +157,10 @@
     &__item {
       border-radius: 0 12rem;
 
+      &:nth-child(n + 2) {
+        margin-top: 40rem;
+      }
+
       &--big {
         display: flex;
         flex-direction: column;
