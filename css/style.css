@@ -3739,8 +3739,10 @@ body {
   margin-bottom: 20rem;
   margin-top: 12rem;
 }
-.about-intro--service .about-intro__title-content {
-  width: 82rem;
+@media (min-width: 48.01em) {
+  .about-intro--service .about-intro__title-content {
+    width: 82rem;
+  }
 }
 .about-intro__info-block {
   display: -webkit-box;
@@ -4472,6 +4474,62 @@ body {
 .partner-stages {
   margin-bottom: 20rem;
 }
+.partner-stages--four .partner-stages__item-bg-line {
+  position: absolute;
+  top: -5rem;
+  right: -65%;
+  z-index: -1;
+  width: 36.8rem;
+  height: 43.6rem;
+}
+.partner-stages--four .partner-stages__item-bg-line > img {
+  width: 100%;
+  height: 100%;
+}
+.partner-stages--four .partner-stages__item:nth-child(even) > .partner-stages__item-bg-line {
+  top: auto;
+  bottom: -5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.partner-stages--five .partner-stages__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.partner-stages--five .partner-stages__item-bg-line {
+  position: absolute;
+  top: -2rem;
+  right: -81%;
+  z-index: -1;
+  width: 36.8rem;
+  height: 43.6rem;
+}
+.partner-stages--five .partner-stages__item-bg-line > img {
+  width: 100%;
+  height: 100%;
+}
+.partner-stages--five .partner-stages__item:nth-child(even) > .partner-stages__item-bg-line {
+  top: auto;
+  bottom: -2rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.partner-stages__title {
+  margin-bottom: 9rem;
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.58rem;
+}
+@media (max-width: 48em) {
+  .partner-stages__title {
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+}
 .partner-stages__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4493,9 +4551,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 32.1rem;
+  width: 100%;
   height: auto;
   padding: 0 5rem 3.5rem 5rem;
+  margin-right: 4.6rem;
   border-radius: 3rem 3rem 0 0;
   background-color: #D3D6E1;
 }
@@ -4504,21 +4563,10 @@ body {
 }
 .partner-stages__item:last-child {
   border-radius: 6rem 0;
+  margin-right: 0;
 }
 .partner-stages__item:last-child > .partner-stages__item-bg-line {
   display: none;
-}
-.partner-stages__item:nth-child(even) > .partner-stages__item-bg-line {
-  top: auto;
-  bottom: -5rem;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.partner-stages__item-bg-line {
-  position: absolute;
-  top: -5rem;
-  right: -65%;
-  z-index: -1;
 }
 .partner-stages__item-number {
   display: -webkit-box;
@@ -4592,6 +4640,34 @@ body {
   .partner-stages {
     margin-bottom: 32rem;
   }
+  .partner-stages--five .partner-stages__cards {
+    padding: 5rem 0;
+    margin-right: -4rem;
+    margin-bottom: 4rem;
+  }
+  .partner-stages--five .partner-stages__item:nth-child(n+2) {
+    margin-top: 0;
+  }
+  .partner-stages--five .partner-stages__item-bg-line {
+    position: absolute;
+    top: -6rem;
+    right: -66%;
+    z-index: -1;
+    display: block;
+    width: 73.6rem;
+    height: 87.2rem;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  .partner-stages--five .partner-stages__item:nth-child(even) > .partner-stages__item-bg-line {
+    top: auto;
+    bottom: -7.2rem;
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
+  }
+  .partner-stages__title {
+    margin-bottom: 18rem;
+  }
   .partner-stages__cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4646,6 +4722,16 @@ body {
     width: 5.2rem;
     height: 3.2rem;
     margin-left: 7.6rem;
+  }
+  .partner-stages__arrow-block {
+    text-align: center;
+  }
+  .partner-stages__arrow-block > svg {
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: 0 1.5rem;
+    stroke: #1B1B1B;
+    cursor: pointer;
   }
 }
 .all-reviews {
@@ -5462,6 +5548,7 @@ body {
      -moz-appearance: none;
           appearance: none;
   border-bottom: 2px solid #C7CBDA;
+  cursor: pointer;
 }
 .calculate__input--range {
   position: relative;

@@ -21,8 +21,10 @@ $(document).ready(function () {
         }
     });
 
-    // Маска для тедефона
+    // Маски для input
     $('.input-phone').mask('+7 (999) 999-99-99');
+    $('.mask-snils').mask('999-999-999 99');
+    $('.mask-diplom').mask('999999 9999999');
 
     // reviews rating block
     let rating = Number($('.average-rating').attr('rating')).toFixed(1); //Беру значение и округляю до 1 знака после запятой

@@ -6,7 +6,9 @@
 
   &--service {
     .about-intro__title-content {
-      width: 82rem;
+      @media (min-width: 48.01em) {
+        width: 82rem;
+      }
     }
   }
 

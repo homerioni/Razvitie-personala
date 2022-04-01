@@ -264,3 +264,26 @@ courses_slider.on('slideChange', function () {
         courses_current_slide.text(courses_slider.activeIndex + 1);
     }
 });
+
+
+if ($(window).width() <= 768) {
+    $('.partner-stages--five .partner-stages__cards').addClass('swiper')
+        .find('.partner-stages__wrapper').addClass('swiper-wrapper')
+        .find('.partner-stages__item').addClass('swiper-slide')
+}
+
+const partner_stages_slider = new Swiper('.partner-stages__cards.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1.4,
+    spaceBetween: rem(4.6),
+
+    navigation: {
+        nextEl: '.partner-stages__arrow-right',
+        prevEl: '.partner-stages__arrow-left',
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+});
