@@ -7215,6 +7215,115 @@ body {
     line-height: 4.3rem;
   }
 }
+.service-article {
+  margin-bottom: 20rem;
+}
+.service-article__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.service-article__block:nth-child(n+2) {
+  margin-top: 14rem;
+}
+.service-article__block--img-right .service-article__img-box {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.service-article__img-box {
+  width: 61.4rem;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.service-article__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.service-article__text-block {
+  width: 76.5rem;
+}
+.service-article__title {
+  margin-bottom: 5.3rem;
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.58rem;
+}
+@media (max-width: 48em) {
+  .service-article__title {
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+}
+.service-article__text {
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+}
+.service-article__text:nth-child(n+3) {
+  margin-top: 4rem;
+}
+.service-article__list {
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+}
+.service-article__list:nth-child(n+3) {
+  margin-top: 4rem;
+}
+.service-article__list li {
+  list-style-type: disc;
+  margin-left: 3.5rem;
+}
+
+@media (max-width: 48em) {
+  .service-article {
+    margin-bottom: 32rem;
+  }
+  .service-article__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+  .service-article__block:nth-child(n+2) {
+    margin-top: 16rem;
+  }
+  .service-article__img-box {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin-top: 6rem;
+    border-radius: 6rem;
+  }
+  .service-article__text-block {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+  .service-article__title {
+    margin-bottom: 6rem;
+  }
+  .service-article__text {
+    font-size: 3.4rem;
+    line-height: 5.1rem;
+  }
+  .service-article__list {
+    font-size: 3.4rem;
+    line-height: 5.1rem;
+  }
+  .service-article__list li {
+    margin-left: 6rem;
+  }
+}
 body {
   background-image: url("../img/background.svg");
   background-size: cover;
