@@ -1357,9 +1357,6 @@ body {
   margin: 0 2.5rem 0 auto;
   text-align: right;
 }
-.main-intro__box--two {
-  width: 66.666%;
-}
 .main-intro__box--align-left p {
   text-align: left;
 }
@@ -1372,65 +1369,74 @@ body {
 .main-intro__box#main-intro-box1 {
   left: 0;
   top: 0;
-  border-radius: 0 10rem 0 0;
+  border-radius: 0 9rem 0 0;
   background-color: #fff;
 }
 .main-intro__box#main-intro-box2 {
   left: 33.333%;
   top: 0;
-  border-radius: 0 0 10rem 0;
+  border-radius: 9rem 0;
   background-color: #BAC9D9;
 }
 .main-intro__box#main-intro-box3 {
   left: 66.666%;
   top: 0;
-  border-radius: 10rem 0 0 0;
+  border-radius: 0 0 0 9rem;
   background-color: #CD010C;
 }
 .main-intro__box#main-intro-box4 {
   left: 0;
   top: 25%;
-  border-radius: 10rem 0 10rem 0;
-}
-.main-intro__box#main-intro-box5 {
-  left: 66.666%;
-  top: 25%;
-  border-radius: 0 0 0 10rem;
-  background-color: #fff;
-}
-.main-intro__box#main-intro-box6 {
-  left: 0;
-  top: 50%;
-  border-radius: 10rem 0 0 0;
-  background-color: #CD010C;
-}
-.main-intro__box#main-intro-box7 {
-  left: 33.333%;
-  top: 50%;
-  border-radius: 10rem;
+  border-radius: 9rem 0 0 0;
   background-color: #BAC9D9;
 }
-.main-intro__box#main-intro-box8 {
+.main-intro__box#main-intro-box5 {
+  left: 33.333%;
+  top: 25%;
+  border-radius: 9rem;
+  background-color: #CD010C;
+}
+.main-intro__box#main-intro-box6 {
   left: 66.666%;
+  top: 25%;
+  border-radius: 0 0 9rem 0;
+  background-color: #BAC9D9;
+}
+.main-intro__box#main-intro-box7 {
+  left: 0;
   top: 50%;
-  border-radius: 10rem 0 0 0;
+  border-radius: 9rem 0 0 0;
+  background-color: #CD010C;
+}
+.main-intro__box#main-intro-box8 {
+  left: 33.333%;
+  top: 50%;
+  border-radius: 0 0 10rem 0;
+  background-color: #fff;
 }
 .main-intro__box#main-intro-box9 {
-  left: 0;
-  top: 75%;
+  left: 66.666%;
+  top: 50%;
   border-radius: 0;
+  background-color: #9AA0B5;
 }
 .main-intro__box#main-intro-box10 {
-  left: 33.333%;
+  left: 0;
   top: 75%;
-  border-radius: 0;
+  border-radius: 9rem 0;
   background-color: #fff;
 }
 .main-intro__box#main-intro-box11 {
+  left: 33.333%;
+  top: 75%;
+  border-radius: 0;
+  background-color: #fff;
+}
+.main-intro__box#main-intro-box12 {
   left: 66.666%;
   top: 75%;
-  border-radius: 0 10rem 0 10rem;
-  background-color: #BAC9D9;
+  border-radius: 0 9rem 0 0;
+  background-color: #CD010C;
 }
 .main-intro__box-text {
   font-size: 1.8rem;

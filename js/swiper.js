@@ -8,6 +8,8 @@ const rem = function (rem) {
     }
 }
 
+let animPlay = false;
+
 const main_intro_slider = new Swiper('.main-intro__slider', {
     direction: 'horizontal',
     slidesPerView: 1,
@@ -40,6 +42,40 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
         delay: 5000,
         disableOnInteraction: true,
     },
+
+    on: {
+        slideChange: function () {
+            let column = $('.main-intro__image-block').width() / 3,
+                row = $('.main-intro__image-block').height() / 4;
+            if (!animPlay) {
+                $('.main-intro__box').each(function () {
+                    let left = Number($(this).css('left').slice(0, -2)),
+                        top = Number($(this).css('top').slice(0, -2));
+                    animPlay = true;
+                    setTimeout(function () {animPlay = false}, 500);
+                    if (left >= -1 && left <= 1) {
+                        if (top >= -1 && top <= 1) {
+                            $(this).css('left', '33.333%');
+                        } else {
+                            $(this).css('top', top - row);
+                        }
+                    } else if (left > column - 1 && left < column + 1) {
+                        if (top >= -1 && top <= 1) {
+                            $(this).css('left', '66.666%');
+                        } else if (top > row * 3 - 1) {
+                            $(this).css('left', '0');
+                        }
+                    } else {
+                        if (top > row * 3 - 1) {
+                            $(this).css('left', '33.333%');
+                        } else {
+                            $(this).css('top', top + row);
+                        }
+                    }
+                });
+            }
+        },
+    }
 });
 
 const offers_slider = new Swiper('.offers__slider', {
