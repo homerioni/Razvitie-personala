@@ -2,6 +2,7 @@
 
 .header {
   &__block {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -450,6 +451,8 @@
 @media (max-width: 48em) {
   .header {
     &__block {
+      z-index: 6;
+
       &--mobile {
         background-color: #fff;
         min-height: 16rem;
@@ -483,6 +486,7 @@
         height: 2px;
         border-radius: 100rem;
         background-color: black;
+        transition: 0.3s ease;
 
         &:before {
           content: '';
@@ -494,6 +498,7 @@
           height: 2px;
           border-radius: 100rem;
           background-color: black;
+          transition: 0.3s ease;
         }
 
         &:after {
@@ -506,6 +511,23 @@
           height: 2px;
           border-radius: 100rem;
           background-color: black;
+          transition: 0.3s ease;
+        }
+      }
+
+      &.open {
+        > div {
+          background-color: transparent;
+
+          &:before {
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+          }
+
+          &:after {
+            bottom: calc(50% - 1px);
+            transform: rotate(-45deg);
+          }
         }
       }
     }
@@ -541,6 +563,82 @@
 
         path {
           stroke: black;
+        }
+      }
+    }
+
+    &__burger-menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      display: none;
+      width: 100vw;
+      height: 110vh;
+      padding: 4rem;
+      margin-top: 16rem;
+      border-top: 2px #C4C4C4 solid;
+      background-color: #fff;
+      text-align: center;
+      overflow-y: scroll;
+    }
+
+    &__burger-item {
+      font-weight: 500;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+      margin: 6rem 0;
+
+      &--portal {
+        margin: 8rem 0;
+
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          font-size: 3.4rem;
+          line-height: 4.3rem;
+
+          > svg {
+            width: 5.4rem;
+            height: 5.4rem;
+            margin-right: 2.2rem;
+
+            path {
+              stroke: $red;
+            }
+          }
+        }
+      }
+
+      &--info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4rem 0;
+
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        svg {
+          width: 4.6rem;
+          height: 4.6rem;
+          margin-right: 2.2rem;
+
+          path {
+            stroke: $gray-icon;
+          }
+        }
+      }
+
+      &--mail {
+        svg path {
+          stroke: none;
+          fill: $gray-icon;
         }
       }
     }

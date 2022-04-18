@@ -75,4 +75,12 @@ $(document).ready(function () {
             }
         });
     }
+
+    // burger menu
+    $('.header__burger-menu-btn').click(function () {
+        $('body').toggleClass('lock');
+        $('.header__burger-menu').slideToggle();
+        $(this).toggleClass('open');
+    });
+
 });
