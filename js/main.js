@@ -83,4 +83,14 @@ $(document).ready(function () {
         $(this).toggleClass('open');
     });
 
+    // order function
+    $('.calculate__input--select').change(function () {
+        if ($(this).val() === 'corporate') {
+            $('.calculate').addClass('corporate');
+        } else {
+            $('.calculate').removeClass('corporate');
+            $('.calculate__item--corporate').find('input').val('');
+        }
+    });
+
 });
