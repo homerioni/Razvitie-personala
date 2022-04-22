@@ -32,7 +32,8 @@
             height: 8rem;
             background: linear-gradient(0deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 0);
             transform: skewX(25deg);
-            transition: 0.3s ease;
+            transition: 0.3s ease left, 0.3s ease right;
+            contain: content;
         }
 
         li:nth-child(even) {
