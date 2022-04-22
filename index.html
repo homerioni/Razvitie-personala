@@ -24,34 +24,31 @@
         }
 
         li {
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 80rem;
             height: 8rem;
             background: linear-gradient(0deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 0);
-            transform: skewX(25deg);
-            transition: 0.3s ease left, 0.3s ease right;
+            transition: 0.5s ease transform;
             contain: content;
         }
 
         li:nth-child(even) {
-            left: 0;
             transform: skewX(-25deg);
             margin-left: 20rem;
         }
 
         li:nth-child(odd) {
-            right: 0;
+            transform: skewX(25deg);
         }
 
         li:nth-child(even):hover {
-            left: -10%;
+            transform: skewX(-25deg) translate3d(-10%, 0, 0);
         }
 
         li:nth-child(odd):hover {
-            right: -10%;
+            transform: skewX(25deg) translate3d(10%, 0, 0);
         }
 
         li a {
