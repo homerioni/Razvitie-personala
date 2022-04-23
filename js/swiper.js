@@ -45,14 +45,15 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
 
     on: {
         init: function () {
-            let column = 1,
-                row = 1;
+            let column = 0,
+                row = 0;
             $('.main-intro__box').each(function () {
                 $(this).attr('column', column).attr('row', row);
-                if (column < 3) {
+                    // .css('transform', 'translate3d(' + (column * 100) + '%, ' + (row * 100) + '%, 0)');
+                if (column < 2) {
                     column++;
                 } else {
-                    column = 1;
+                    column = 0;
                     row++;
                 }
             });
@@ -64,28 +65,28 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
                         row = Number($(this).attr('row'));
                     checkAnimPlay = true;
                     setTimeout(() => checkAnimPlay = false, 500);
-                    if (column === 1) {
-                        if (row === 1) {
+                    if (column === 0) {
+                        if (row === 0) {
                             $(this).css('transform', 'translate3d(100%, 0, 0)');
-                            $(this).attr('column', '2');
+                            $(this).attr('column', '1');
                         } else {
-                            $(this).css('transform', 'translate3d(0, ' + ((row - 2) * 100) + '%, 0)');
+                            $(this).css('transform', 'translate3d(0, ' + ((row - 1) * 100) + '%, 0)');
                             $(this).attr('row', row - 1);
                         }
-                    } else if (column === 2) {
-                        if (row === 1) {
+                    } else if (column === 1) {
+                        if (row === 0) {
                             $(this).css('transform', 'translate3d(200%, 0, 0)');
-                            $(this).attr('column', '3');
-                        } else if (row === 4) {
+                            $(this).attr('column', '2');
+                        } else if (row === 3) {
                             $(this).css('transform', 'translate3d(0, 300%, 0)');
-                            $(this).attr('column', '1');
+                            $(this).attr('column', '0');
                         }
                     } else {
-                        if (row === 4) {
+                        if (row === 3) {
                             $(this).css('transform', 'translate3d(100%, 300%, 0)');
-                            $(this).attr('column', '2');
+                            $(this).attr('column', '1');
                         } else {
-                            $(this).css('transform', 'translate3d(200%, ' + (row * 100) + '%, 0');
+                            $(this).css('transform', 'translate3d(200%, ' + ((row + 1) * 100) + '%, 0');
                             $(this).attr('row', row + 1);
                         }
                     }
