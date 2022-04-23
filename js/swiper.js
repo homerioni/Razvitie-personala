@@ -8,7 +8,7 @@ const rem = function (rem) {
     }
 }
 
-let animPlay = false;
+let checkAnimPlay = false;
 
 const main_intro_slider = new Swiper('.main-intro__slider', {
     direction: 'horizontal',
@@ -44,32 +44,49 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
     },
 
     on: {
+        init: function () {
+            let column = 1,
+                row = 1;
+            $('.main-intro__box').each(function () {
+                $(this).attr('column', column).attr('row', row);
+                if (column < 3) {
+                    column++;
+                } else {
+                    column = 1;
+                    row++;
+                }
+            });
+        },
         slideChange: function () {
-            let column = $('.main-intro__image-block').width() / 3,
-                row = $('.main-intro__image-block').height() / 4;
-            if (!animPlay) {
+            if (!checkAnimPlay) {
                 $('.main-intro__box').each(function () {
-                    let left = Number($(this).css('left').slice(0, -2)),
-                        top = Number($(this).css('top').slice(0, -2));
-                    animPlay = true;
-                    setTimeout(function () {animPlay = false}, 500);
-                    if (left >= -1 && left <= 1) {
-                        if (top >= -1 && top <= 1) {
-                            $(this).css('left', '33.333%');
+                    let column = Number($(this).attr('column')),
+                        row = Number($(this).attr('row'));
+                    checkAnimPlay = true;
+                    setTimeout(() => checkAnimPlay = false, 500);
+                    if (column === 1) {
+                        if (row === 1) {
+                            $(this).css('transform', 'translate3d(100%, 0, 0)');
+                            $(this).attr('column', '2');
                         } else {
-                            $(this).css('top', top - row);
+                            $(this).css('transform', 'translate3d(0, ' + ((row - 2) * 100) + '%, 0)');
+                            $(this).attr('row', row - 1);
                         }
-                    } else if (left > column - 1 && left < column + 1) {
-                        if (top >= -1 && top <= 1) {
-                            $(this).css('left', '66.666%');
-                        } else if (top > row * 3 - 1) {
-                            $(this).css('left', '0');
+                    } else if (column === 2) {
+                        if (row === 1) {
+                            $(this).css('transform', 'translate3d(200%, 0, 0)');
+                            $(this).attr('column', '3');
+                        } else if (row === 4) {
+                            $(this).css('transform', 'translate3d(0, 300%, 0)');
+                            $(this).attr('column', '1');
                         }
                     } else {
-                        if (top > row * 3 - 1) {
-                            $(this).css('left', '33.333%');
+                        if (row === 4) {
+                            $(this).css('transform', 'translate3d(100%, 300%, 0)');
+                            $(this).attr('column', '2');
                         } else {
-                            $(this).css('top', top + row);
+                            $(this).css('transform', 'translate3d(200%, ' + (row * 100) + '%, 0');
+                            $(this).attr('row', row + 1);
                         }
                     }
                 });
