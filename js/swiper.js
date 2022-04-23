@@ -100,7 +100,7 @@ const offers_slider = new Swiper('.offers__slider', {
     direction: 'horizontal',
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 3,
             spaceBetween: rem(4.6),
         },
@@ -157,7 +157,7 @@ const reviews_slider = new Swiper('.reviews__slider', {
     spaceBetween: rem(4.6),
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 2.5,
         },
         0: {
@@ -210,7 +210,7 @@ const partners_slider = new Swiper('.partners__slider', {
     direction: 'horizontal',
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 4,
             spaceBetween: rem(1),
             grid: {
@@ -270,7 +270,7 @@ const courses_distance_slider = new Swiper('.courses__slider--distance', {
     direction: 'horizontal',
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 2,
             spaceBetween: rem(5),
         },
@@ -325,7 +325,7 @@ const courses_watched_slider = new Swiper('.courses__slider--watched', {
     direction: 'horizontal',
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 3,
             spaceBetween: rem(4.4),
         },
@@ -404,7 +404,7 @@ const news_slider = new Swiper('.news__slider', {
     spaceBetween: rem(5),
 
     breakpoints: {
-        768: {
+        769: {
             slidesPerView: 2,
             spaceBetween: rem(5),
         },
