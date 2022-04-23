@@ -49,7 +49,6 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
                 row = 0;
             $('.main-intro__box').each(function () {
                 $(this).attr('column', column).attr('row', row);
-                    // .css('transform', 'translate3d(' + (column * 100) + '%, ' + (row * 100) + '%, 0)');
                 if (column < 2) {
                     column++;
                 } else {
@@ -58,41 +57,41 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
                 }
             });
         },
-        // slideChange: function () {
-        //     if (!checkAnimPlay) {
-        //         $('.main-intro__box').each(function () {
-        //             let column = Number($(this).attr('column')),
-        //                 row = Number($(this).attr('row'));
-        //             checkAnimPlay = true;
-        //             setTimeout(() => checkAnimPlay = false, 500);
-        //             if (column === 0) {
-        //                 if (row === 0) {
-        //                     $(this).css('transform', 'translate3d(100%, 0, 0)');
-        //                     $(this).attr('column', '1');
-        //                 } else {
-        //                     $(this).css('transform', 'translate3d(0, ' + ((row - 1) * 100) + '%, 0)');
-        //                     $(this).attr('row', row - 1);
-        //                 }
-        //             } else if (column === 1) {
-        //                 if (row === 0) {
-        //                     $(this).css('transform', 'translate3d(200%, 0, 0)');
-        //                     $(this).attr('column', '2');
-        //                 } else if (row === 3) {
-        //                     $(this).css('transform', 'translate3d(0, 300%, 0)');
-        //                     $(this).attr('column', '0');
-        //                 }
-        //             } else {
-        //                 if (row === 3) {
-        //                     $(this).css('transform', 'translate3d(100%, 300%, 0)');
-        //                     $(this).attr('column', '1');
-        //                 } else {
-        //                     $(this).css('transform', 'translate3d(200%, ' + ((row + 1) * 100) + '%, 0');
-        //                     $(this).attr('row', row + 1);
-        //                 }
-        //             }
-        //         });
-        //     }
-        // },
+        slideChange: function () {
+            if (!checkAnimPlay) {
+                $('.main-intro__box').each(function () {
+                    let column = Number($(this).attr('column')),
+                        row = Number($(this).attr('row'));
+                    checkAnimPlay = true;
+                    setTimeout(() => checkAnimPlay = false, 500);
+                    if (column === 0) {
+                        if (row === 0) {
+                            $(this).css('transform', 'translate3d(100%, 0, 0)');
+                            $(this).attr('column', '1');
+                        } else {
+                            $(this).css('transform', 'translate3d(0, ' + ((row - 1) * 100) + '%, 0)');
+                            $(this).attr('row', row - 1);
+                        }
+                    } else if (column === 1) {
+                        if (row === 0) {
+                            $(this).css('transform', 'translate3d(200%, 0, 0)');
+                            $(this).attr('column', '2');
+                        } else if (row === 3) {
+                            $(this).css('transform', 'translate3d(0, 300%, 0)');
+                            $(this).attr('column', '0');
+                        }
+                    } else {
+                        if (row === 3) {
+                            $(this).css('transform', 'translate3d(100%, 300%, 0)');
+                            $(this).attr('column', '1');
+                        } else {
+                            $(this).css('transform', 'translate3d(200%, ' + ((row + 1) * 100) + '%, 0');
+                            $(this).attr('row', row + 1);
+                        }
+                    }
+                });
+            }
+        },
     }
 });
 
