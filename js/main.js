@@ -80,6 +80,7 @@ $(document).ready(function () {
     $('.header__burger-menu-btn').click(function () {
         $('body').toggleClass('lock');
         $('.header__burger-menu').slideToggle();
+        $('.personal__menu').slideToggle();
         $(this).toggleClass('open');
     });
 
@@ -91,6 +92,24 @@ $(document).ready(function () {
             $('.calculate').removeClass('corporate');
             $('.calculate__item--corporate').find('input').val('');
         }
+    });
+
+    // personal edit
+    $('.personal__edit-btn').click(function () {
+        $(this).parent().parent().find('.calculate__input').removeAttr('disabled');
+        $(this).parent().find('.calculate__btn').css('display', 'flex');
+    });
+    $('.personal__buttons .calculate__btn').click(function () {
+        $(this).parent().parent().find('.calculate__input').attr('disabled', 'disabled');
+        $(this).parent().find('.calculate__btn').hide();
+    });
+    $('textarea.calculate__input').each(function () {
+        $(this)[0].style.height = 'auto';
+        $(this)[0].style.height = $(this)[0].scrollHeight + 2 + "px";
+    });
+    $('textarea.calculate__input').on('input', function () {
+        $(this)[0].style.height = 'auto';
+        $(this)[0].style.height = $(this)[0].scrollHeight + 2 + "px";
     });
 
 });

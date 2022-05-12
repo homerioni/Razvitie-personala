@@ -120,6 +120,7 @@
 
   &__logo {
     flex: none;
+    display: block;
     width: 16rem;
     height: 11.9rem;
     margin-right: 5.5rem;
@@ -454,6 +455,7 @@
       z-index: 6;
 
       &--mobile {
+        position: relative;
         background-color: #fff;
         min-height: 16rem;
       }
@@ -570,13 +572,12 @@
     &__burger-menu {
       position: absolute;
       left: 0;
-      top: 0;
+      top: 100%;
       z-index: 5;
       display: none;
       width: 100vw;
       height: 110vh;
       padding: 4rem;
-      margin-top: 16rem;
       border-top: 2px #C4C4C4 solid;
       background-color: #fff;
       text-align: center;
