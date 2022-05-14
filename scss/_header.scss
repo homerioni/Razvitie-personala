@@ -23,10 +23,10 @@
     line-height: 2.28rem;
 
     &--top {
-      flex-grow: 3;
+      flex-grow: 5;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       min-height: 6rem;
       font-size: 1.6rem;
       line-height: 2.03rem;
@@ -96,7 +96,7 @@
     }
 
     &--contact-us {
-      text-decoration: underline;
+      border-bottom: 1px solid $default-color;
     }
 
     &--phone {
@@ -110,6 +110,25 @@
         width: 2.2rem;
         height: 2.2rem;
         margin-left: 1.2rem;
+
+        path {
+          stroke: $red;
+        }
+      }
+    }
+
+    &--personal {
+      flex-grow: 10;
+      justify-content: flex-end;
+
+      font-weight: bold;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+
+      > svg {
+        width: 2rem;
+        height: 2.4rem;
+        margin-right: 1.5rem;
 
         path {
           stroke: $red;
@@ -436,14 +455,14 @@
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
-    background-color: #fff;
+    background-color: $default-color;
 
     > svg {
       width: 2.6rem;
       height: 2.7rem;
 
       path {
-        stroke: $default-color;
+        stroke: white;
       }
     }
   }
@@ -467,7 +486,7 @@
     &__logo {
       width: 14rem;
       height: 10.4rem;
-      margin: 0 5rem;
+      margin: 0 9rem;
     }
 
     &__mobile-btn {
@@ -547,13 +566,61 @@
       }
     }
 
-    &__mobile-phone {
+    &__mobile-personal {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        display: block;
+        width: 3rem;
+        height: 2px;
+        border-radius: 100rem;
+        background-color: black;
+        transition: 0.5s ease transform, 0.3s ease opacity;
+        opacity: 0;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        display: block;
+        width: 3rem;
+        height: 2px;
+        border-radius: 100rem;
+        background-color: black;
+        transition: 0.5s ease transform, 0.3s ease opacity;
+        opacity: 0;
+      }
+
       > svg {
-        width: 4.4rem;
+        width: 3.4rem;
         height: 4.4rem;
 
         path {
           stroke: black;
+        }
+      }
+
+      &.open {
+        &:before {
+          transform: rotate(45deg) translate(-1rem, 1rem);
+          opacity: 1;
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(-1rem, -1rem);
+          opacity: 1;
+        }
+
+        > svg {
+          opacity: 0;
         }
       }
     }
@@ -580,7 +647,6 @@
       padding: 4rem;
       border-top: 2px #C4C4C4 solid;
       background-color: #fff;
-      text-align: center;
       overflow-y: scroll;
     }
 
@@ -591,12 +657,11 @@
       margin: 6rem 0;
 
       &--portal {
-        margin: 8rem 0;
+        margin: 8rem 0 6rem 0;
 
         > a {
           display: flex;
           align-items: center;
-          justify-content: center;
           font-weight: bold;
           font-size: 3.4rem;
           line-height: 4.3rem;
@@ -616,8 +681,6 @@
       &--info {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin: 4rem 0;
 
         > a {
           display: flex;
@@ -632,6 +695,19 @@
 
           path {
             stroke: $gray-icon;
+          }
+        }
+      }
+
+      &--phone {
+        margin-bottom: 10rem;
+        font-weight: bold;
+
+        svg {
+          margin: 0 0 0 2rem;
+
+          path {
+            stroke: $red;
           }
         }
       }
