@@ -8304,6 +8304,9 @@ body {
 .personal__form .calculate__item {
   width: 41.6rem;
 }
+.personal__form textarea {
+  resize: none;
+}
 .personal__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8473,7 +8476,6 @@ body {
   .personal__form textarea {
     margin-bottom: 2rem;
     line-height: 6.4rem;
-    resize: none;
   }
   .personal__textarea {
     -webkit-box-align: start;

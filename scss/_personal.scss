@@ -116,6 +116,10 @@
     .calculate__item {
       width: 41.6rem;
     }
+
+    textarea {
+      resize: none;
+    }
   }
 
   &__buttons {
@@ -305,7 +309,6 @@
       textarea {
         margin-bottom: 2rem;
         line-height: 6.4rem;
-        resize: none;
       }
     }
 
