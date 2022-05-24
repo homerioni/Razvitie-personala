@@ -430,7 +430,10 @@
                         <svg viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.50031 8.5037L1.20667 2.20797C0.931111 1.93171 0.931111 1.48414 1.20667 1.20719C1.48222 0.930937 1.92979 0.930937 2.20535 1.20719L7.99962 7.00356L13.7939 1.20789C14.0694 0.931635 14.517 0.931635 14.7933 1.20789C15.0688 1.48414 15.0688 1.93241 14.7933 2.20866L8.49963 8.5044C8.22692 8.77647 7.77232 8.77647 7.50031 8.5037Z" stroke-width="0.5"/>
                         </svg>
-                        <button class="calculate__input-select-btn-load calculate__item--corporate">Загрузить реквизиты</button>
+                        <label class="calculate__input-select-btn-load calculate__item--corporate">
+                            <input type="file">
+                            <span>Загрузить реквизиты</span>
+                        </label>
                     </label>
                     <label class="calculate__item calculate__label-input">
                         <div class="calculate__input-name">Ваше имя*</div>
@@ -589,9 +592,12 @@
                 </li>
             </ul>
         </div>
-        <div class="footer__content">
+        <div class="footer__content footer__content--center">
             <div class="footer__text">© Учебный центр «Развитие персонала»</div>
             <a href="#" class="footer__link footer__link--underline">Политики конфиденциальности</a>
+            <a href="#" class="footer__request-logo">
+                <img src="img/request-logo.svg" alt="">
+            </a>
         </div>
     </div>
 </footer>

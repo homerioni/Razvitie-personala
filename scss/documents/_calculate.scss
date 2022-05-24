@@ -208,10 +208,17 @@
   }
 
   &__input-select-btn-load {
+    display: block;
+    width: fit-content;
     font-size: 1.8rem;
     line-height: 5.2rem;
     color: $red;
     text-decoration: underline;
+    cursor: pointer;
+
+    > input {
+      display: none;
+    }
   }
 
   &__input-range-value {
