@@ -65,6 +65,7 @@ $(document).ready(function () {
         $('.services__services-menu-name').click(function () {
             let this_btn = $(this);
             if ($(this).hasClass('open')) {
+                $('.services__filter-block').slideUp(100);
                 $(this).parent().find('.services__services-list').slideUp(300);
                 setTimeout(function () {
                     this_btn.removeClass('open');
@@ -72,7 +73,14 @@ $(document).ready(function () {
             } else {
                 $(this).addClass('open')
                     .parent().find('.services__services-list').slideDown(300);
+                setTimeout(function () {
+                    $('.services__filter-block').slideDown(100);
+                }, 250)
             }
+        });
+        $('.services__filter-name').click(function () {
+            $(this).toggleClass('open');
+            $('.services__label-range').slideToggle();
         });
     }
 
@@ -102,6 +110,14 @@ $(document).ready(function () {
         }
     });
 
+    // Search mobile
+    $('.search-mobile').click(function () {
+        $('.header__block--mobile').addClass('active');
+    });
+    $('.header__search-bg').click(function () {
+        $('.header__block--mobile').removeClass('active');
+    });
+
     // order function
     $('.calculate__input--select').change(function () {
         if ($(this).val() === 'corporate') {
@@ -128,6 +144,29 @@ $(document).ready(function () {
     $('textarea.calculate__input').on('input', function () {
         $(this)[0].style.height = 'auto';
         $(this)[0].style.height = $(this)[0].scrollHeight + 2 + "px";
+    });
+
+    // Services sub list
+    $('.services__btn').click(function () {
+        let _this = $(this);
+
+        _this.parent().find('.services__card-sub-item').slideToggle(250);
+        if (_this.parent().hasClass('open')) {
+            $('.services__card-open-bg').hide();
+            setTimeout(function () {
+                _this.parent().toggleClass('open');
+            }, 250);
+        } else {
+            _this.parent().toggleClass('open');
+            $('.services__card-open-bg').show();
+        }
+    });
+    $('.services__card-open-bg').click(function () {
+        $(this).hide();
+        $('.services__card-sub-item').slideUp(250);
+        setTimeout(function () {
+            $('.services__item.open').removeClass('open');
+        }, 250);
     });
 
 });
