@@ -1954,6 +1954,15 @@ body {
     margin-top: 0.5rem;
   }
 }
+.prog-study__item.open {
+  position: relative;
+  z-index: 6;
+  border-radius: 3rem 3rem 0 0;
+}
+.prog-study__item.open .prog-study__item-btn > svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .prog-study__img-box {
   width: 23rem;
   height: 23rem;
@@ -2002,8 +2011,8 @@ body {
 }
 .prog-study__item-btn {
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2015,15 +2024,79 @@ body {
           justify-content: center;
   width: 11.7rem;
   height: 5.5rem;
-  border-radius: 6rem 0 3rem 0;
+  border-radius: 10rem 0 6rem 0;
   background-color: #0E62C4;
 }
 .prog-study__item-btn > svg {
-  width: 2.6rem;
-  height: 2.7rem;
+  width: 2.1rem;
+  height: 1.2rem;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 .prog-study__item-btn > svg path {
   stroke: white;
+  fill: white;
+}
+.prog-study__card-sub-item {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-radius: 0 0 3rem 3rem;
+  background-color: white;
+}
+.prog-study__card-item {
+  padding: 3rem 4rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  border-top: 1px solid #C7CBDA;
+}
+.prog-study__card-item--gray {
+  font-weight: normal;
+  color: #757988;
+}
+.prog-study__card-item > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.prog-study__card-item > a > span:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin-left: 2rem;
+}
+.prog-study__card-more-link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto;
+  border-bottom: 1px solid #CD010C;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #CD010C;
+}
+.prog-study__card-open-bg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(27, 27, 27, 0.2);
 }
 
 @media (max-width: 48em) {
@@ -2074,15 +2147,20 @@ body {
 }
 @media (max-width: 48em) {
   .prog-study__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: normal;
         -ms-flex-pack: normal;
             justify-content: normal;
-    height: 38rem;
+    min-height: 38rem;
     padding: 4rem;
     border-radius: 6rem 6rem 9rem 6rem;
   }
   .prog-study__item:nth-child(n+2) {
     margin-top: 2rem;
+  }
+  .prog-study__item.open {
+    border-radius: 6rem;
   }
 }
 @media (max-width: 48em) {
@@ -2097,7 +2175,8 @@ body {
 }
 @media (max-width: 48em) {
   .prog-study__text-block {
-    max-width: 100%;
+    max-width: none;
+    width: 40rem;
   }
 }
 @media (max-width: 48em) {
@@ -2127,11 +2206,38 @@ body {
   .prog-study__item-btn {
     width: 17.2rem;
     height: 8rem;
-    border-radius: 12rem 0 9rem 0;
+    border-radius: 20rem 0 12rem 0;
   }
   .prog-study__item-btn > svg {
-    width: 4rem;
-    height: 4rem;
+    width: 3.2rem;
+    height: 1.8rem;
+  }
+}
+@media (max-width: 48em) {
+  .prog-study__card-sub-item {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+@media (max-width: 48em) {
+  .prog-study__card-item {
+    margin: 0 -4rem 0 -2rem;
+    padding: 6rem;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+    border-top: none;
+    border-bottom: 1px solid #C7CBDA;
+  }
+  .prog-study__card-item > a > span:last-child {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 48em) {
+  .prog-study__card-more-link {
+    margin: 6rem auto;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
   }
 }
 .offers {
@@ -4104,6 +4210,14 @@ body {
 .about-intro__btn > svg path {
   stroke: white;
 }
+.about-intro__btn--service-page {
+  width: 36.2rem;
+  height: 7.8rem;
+  margin-right: auto;
+  border-radius: 0 3rem 0 0;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
 .about-intro__description {
   width: 38rem;
   font-size: 1.8rem;
@@ -4161,6 +4275,23 @@ body {
 .about-intro__link-category:nth-child(n+5) {
   margin-top: 3rem;
 }
+.about-intro__price-block {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.about-intro__price-text {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #757988;
+}
+.about-intro__price {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.8rem;
+}
+.about-intro__price:after {
+  content: " ₽";
+}
 
 @media (max-width: 48em) {
   .about-intro {
@@ -4201,6 +4332,11 @@ body {
     height: 3rem;
     margin-left: 5rem;
   }
+  .about-intro__btn--service-page {
+    width: 100%;
+    height: 12rem;
+    border-radius: 0 6rem 0 0;
+  }
   .about-intro__description {
     width: 100%;
     font-weight: 300;
@@ -4236,6 +4372,16 @@ body {
   }
   .about-intro__link-category:nth-child(n+3) {
     margin-top: 3rem;
+  }
+  .about-intro__price-block {
+    margin-bottom: 8rem;
+  }
+  .about-intro__price-text {
+    font-size: 3rem;
+  }
+  .about-intro__price {
+    font-size: 5rem;
+    line-height: 6rem;
   }
 }
 .boss {
@@ -4983,9 +5129,8 @@ body {
     margin-bottom: 32rem;
   }
   .partner-stages--five .partner-stages__cards {
-    padding: 5rem 0;
-    margin-right: -4rem;
-    margin-bottom: 4rem;
+    padding: 5rem 0 5rem 4rem;
+    margin: 0 -4rem 4rem -4rem;
   }
   .partner-stages--five .partner-stages__item:nth-child(n+2) {
     margin-top: 0;
@@ -6817,6 +6962,7 @@ body {
   position: absolute;
   left: 0;
   top: 100%;
+  width: 100%;
   border-radius: 0 0 3rem 3rem;
   background-color: white;
 }
@@ -7047,6 +7193,8 @@ body {
     line-height: 6.3rem;
   }
   .services__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
     min-height: 38rem;
     padding: 2rem 4rem 4rem 2rem;
@@ -7056,12 +7204,18 @@ body {
   .services__item:nth-child(n+2) {
     margin-top: 2rem;
   }
+  .services__item.open {
+    border-radius: 6rem;
+  }
   .services__img-box {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     width: 27rem;
     height: 30rem;
+  }
+  .services__item-text-block {
+    width: 40rem;
   }
   .services__item-title {
     margin-bottom: 4rem;
@@ -7085,6 +7239,27 @@ body {
   .services__btn > svg {
     width: 3.2rem;
     height: 1.8rem;
+  }
+  .services__card-sub-item {
+    position: static;
+    width: 100%;
+    background-color: transparent;
+  }
+  .services__card-item {
+    margin: 0 -4rem 0 -2rem;
+    padding: 6rem;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
+    border-top: none;
+    border-bottom: 1px solid #C7CBDA;
+  }
+  .services__card-item > a > span:last-child {
+    margin-left: 3rem;
+  }
+  .services__card-more-link {
+    margin: 6rem auto;
+    font-size: 3.4rem;
+    line-height: 4.3rem;
   }
 }
 .service-desc {
@@ -7867,6 +8042,173 @@ body {
   }
   .service-article__list li {
     margin-left: 6rem;
+  }
+}
+.course-page {
+  margin-bottom: 20rem;
+}
+.course-page__title {
+  margin-bottom: 5rem;
+  font-weight: bold;
+  font-size: 4.4rem;
+  line-height: 5.6rem;
+}
+.course-page__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.course-page__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 46.3rem;
+  min-height: 22.4rem;
+  padding: 2rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+.course-page__item:not(:nth-child(3n)) {
+  margin-right: 1.5rem;
+}
+.course-page__item:nth-child(n+4) {
+  margin-top: 1.5rem;
+}
+.course-page__img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 20rem;
+  height: 17rem;
+  margin-right: 2rem;
+}
+.course-page__img-box > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.course-page__text-block {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  padding: 2rem 0;
+}
+.course-page__item-title {
+  display: block;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.course-page__item-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+  color: #757988;
+}
+.course-page__item-price:before {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 1.6rem;
+  border-radius: 100%;
+  background-color: #757988;
+}
+.course-page__item-price:after {
+  content: "₽";
+  margin-left: 0.6rem;
+}
+.course-page__item-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 11.7rem;
+  height: 5.5rem;
+  border-radius: 6rem 0 3rem 0;
+  background-color: #0E62C4;
+}
+.course-page__item-btn > svg {
+  width: 2.6rem;
+  height: 2.7rem;
+}
+.course-page__item-btn > svg path {
+  stroke: white;
+}
+
+@media (max-width: 48em) {
+  .course-page__title {
+    margin-bottom: 6rem;
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+  .course-page__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .course-page__item {
+    width: 100%;
+    min-height: 38rem;
+    padding: 4rem;
+    border-radius: 6rem;
+  }
+  .course-page__item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+  .course-page__item:nth-child(n+2) {
+    margin-top: 3rem;
+  }
+  .course-page__img-box {
+    width: 28rem;
+    height: 24rem;
+    margin-right: 3rem;
+  }
+  .course-page__item-title {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  .course-page__item-price {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .course-page__item-price:before {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 2rem;
+  }
+  .course-page__item-btn {
+    width: 17.2rem;
+    height: 8rem;
+    border-radius: 12rem 0 9rem 0;
+  }
+  .course-page__item-btn > svg {
+    width: 4rem;
+    height: 4rem;
   }
 }
 .cart {

@@ -358,6 +358,7 @@
     position: absolute;
     left: 0;
     top: 100%;
+    width: 100%;
     border-radius: 0 0 3rem 3rem;
     background-color: white;
   }
@@ -485,6 +486,7 @@
       &:last-child {
         border-bottom: none;
       }
+
     }
 
     &__services-item-name {
@@ -606,6 +608,7 @@
     }
 
     &__item {
+      flex-wrap: wrap;
       width: 100%;
       min-height: 38rem;
       padding: 2rem 4rem 4rem 2rem;
@@ -614,6 +617,10 @@
 
       &:nth-child(n + 2) {
         margin-top: 2rem;
+      }
+
+      &.open {
+        border-radius: 6rem;
       }
     }
 
@@ -624,6 +631,7 @@
     }
 
     &__item-text-block {
+      width: 40rem;
     }
 
     &__item-title {
@@ -652,6 +660,42 @@
         width: 3.2rem;
         height: 1.8rem;
       }
+    }
+
+    &__card-sub-item {
+      position: static;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    &__card-list {
+    }
+
+    &__card-item {
+      margin: 0 -4rem 0 -2rem;
+      padding: 6rem;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+      border-top: none;
+      border-bottom: 1px solid #C7CBDA;
+
+      &--gray {
+      }
+
+      > a {
+        > span:last-child {
+          margin-left: 3rem;
+        }
+      }
+    }
+
+    &__card-more-link {
+      margin: 6rem auto;
+      font-size: 3.4rem;
+      line-height: 4.3rem;
+    }
+
+    &__card-open-bg {
     }
   }
 }

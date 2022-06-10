@@ -56,6 +56,15 @@
         stroke: white;
       }
     }
+
+    &--service-page {
+      width: 36.2rem;
+      height: 7.8rem;
+      margin-right: auto;
+      border-radius: 0 3rem 0 0;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
   }
 
   &__description {
@@ -110,6 +119,27 @@
       margin-top: 3rem;
     }
   }
+
+  &__price-block {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  &__price-text {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: $gray;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+
+    &:after {
+      content: ' ₽';
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -146,6 +176,12 @@
         width: 5.2rem;
         height: 3rem;
         margin-left: 5rem;
+      }
+
+      &--service-page {
+        width: 100%;
+        height: 12rem;
+        border-radius: 0 6rem 0 0;
       }
     }
 
@@ -191,6 +227,19 @@
       &:nth-child(n + 3) {
         margin-top: 3rem;
       }
+    }
+
+    &__price-block {
+      margin-bottom: 8rem;
+    }
+
+    &__price-text {
+      font-size: 3rem;
+    }
+
+    &__price {
+      font-size: 5rem;
+      line-height: 6rem;
     }
   }
 }

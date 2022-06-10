@@ -169,4 +169,27 @@ $(document).ready(function () {
         }, 250);
     });
 
+    // Main sub list
+    $('.prog-study__item-btn').click(function () {
+        let _this = $(this);
+
+        _this.parent().find('.prog-study__card-sub-item').slideToggle(250);
+        if (_this.parent().hasClass('open')) {
+            $('.prog-study__card-open-bg').hide();
+            setTimeout(function () {
+                _this.parent().toggleClass('open');
+            }, 250);
+        } else {
+            _this.parent().toggleClass('open');
+            $('.prog-study__card-open-bg').show();
+        }
+    });
+    $('.prog-study__card-open-bg').click(function () {
+        $(this).hide();
+        $('.prog-study__card-sub-item').slideUp(250);
+        setTimeout(function () {
+            $('.prog-study__item.open').removeClass('open');
+        }, 250);
+    });
+
 });

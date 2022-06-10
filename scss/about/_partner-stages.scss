@@ -167,9 +167,8 @@
     &--five {
       .partner-stages {
         &__cards {
-          padding: 5rem 0;
-          margin-right: -4rem;
-          margin-bottom: 4rem;
+          padding: 5rem 0 5rem 4rem;
+          margin: 0 -4rem 4rem -4rem;
         }
 
         &__item {
