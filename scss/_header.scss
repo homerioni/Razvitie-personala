@@ -480,6 +480,7 @@
 
       &--mobile {
         position: relative;
+        z-index: 11;
         background-color: #fff;
         min-height: 16rem;
 
@@ -495,6 +496,7 @@
             position: fixed;
             left: 0;
             top: 16rem;
+            z-index: 11;
             display: block;
             width: 100vw;
             height: 100vh;
