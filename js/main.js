@@ -192,4 +192,12 @@ $(document).ready(function () {
         }, 250);
     });
 
+    // Disable filter
+    $('.filter-disable').click(function () {
+        $('.services__label-range').addClass('disabled');
+    });
+    $('.services__label-range').focusin(function () {
+        $(this).removeClass('disabled');
+    });
+
 });

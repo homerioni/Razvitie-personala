@@ -147,10 +147,25 @@
   }
 
   &__filter-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 3rem;
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.3rem;
+
+    > svg {
+      flex: none;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-left: 2rem;
+      cursor: pointer;
+
+      path {
+        fill: $red;
+      }
+    }
   }
 
   &__label-range {
@@ -521,9 +536,6 @@
     }
 
     &__filter-name {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       margin-bottom: 0;
       font-size: 3.6rem;
       line-height: 4.6rem;

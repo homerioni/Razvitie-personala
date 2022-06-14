@@ -6755,10 +6755,31 @@ body {
   background-color: #fff;
 }
 .services__filter-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 3rem;
   font-weight: bold;
   font-size: 1.8rem;
   line-height: 2.3rem;
+}
+.services__filter-name > svg {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.services__filter-name > svg path {
+  fill: #CD010C;
 }
 .services__label-range {
   position: relative;
@@ -7118,15 +7139,6 @@ body {
     border-top: 1px solid #C7CBDA;
   }
   .services__filter-name {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-bottom: 0;
     font-size: 3.6rem;
     line-height: 4.6rem;
