@@ -147,7 +147,7 @@ $(document).ready(function () {
     });
 
     // Services sub list
-    $('.services__btn').click(function () {
+    $('button.services__btn').click(function () {
         let _this = $(this);
 
         _this.parent().find('.services__card-sub-item').slideToggle(250);

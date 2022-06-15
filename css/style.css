@@ -6980,6 +6980,10 @@ body {
   stroke: white;
   fill: white;
 }
+.services__btn--link > svg {
+  -webkit-transform: rotate(-90deg) translateY(3px);
+          transform: rotate(-90deg) translateY(3px);
+}
 .services__card-sub-item {
   display: none;
   position: absolute;
@@ -7253,6 +7257,10 @@ body {
   .services__btn > svg {
     width: 3.2rem;
     height: 1.8rem;
+  }
+  .services__btn--link > svg {
+    -webkit-transform: rotate(-90deg) translateY(2px);
+            transform: rotate(-90deg) translateY(2px);
   }
   .services__card-sub-item {
     position: static;

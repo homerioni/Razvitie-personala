@@ -366,6 +366,12 @@
         fill: white;
       }
     }
+
+    &--link {
+      > svg {
+        transform: rotate(-90deg) translateY(3px);
+      }
+    }
   }
 
   &__card-sub-item {
@@ -671,6 +677,12 @@
       > svg {
         width: 3.2rem;
         height: 1.8rem;
+      }
+
+      &--link {
+        > svg {
+          transform: rotate(-90deg) translateY(2px);
+        }
       }
     }
 
