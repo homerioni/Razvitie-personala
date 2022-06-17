@@ -86,7 +86,7 @@ $(document).ready(function () {
     });
     $('.mobile .services__filter-name').click(function () {
         $(this).toggleClass('open');
-        $('.services__label-range').slideToggle();
+        $('.services__range-block').slideToggle();
     });
 
     // burger menu
@@ -201,5 +201,16 @@ $(document).ready(function () {
     $('.filter-disable').click(function () {
         $('.services__label-range').addClass('disabled');
     });
+
+    // Document open
+    $('.review-img').click(function () {
+        $(this).find('.review-doc').fadeIn();
+        $('.review-doc-bg').fadeIn();
+    });
+    $('.review-doc-bg').click(function () {
+        $(this).fadeOut();
+        $('.review-doc').fadeOut();
+    });
+    $('.review-page__img-box').click(function () {});
 
 });
