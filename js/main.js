@@ -42,12 +42,19 @@ $(document).ready(function () {
         '--max': input_range.attr('max'),
     });
     $(document).on('input change', '.input-range', function() {
-        $(this).css({
+        input_range.css({
             '--value': $(this).val(),
             '--min': $(this).attr('min'),
             '--max': $(this).attr('max'),
         });
         $('.input-range-value').text($(this).val());
+        input_range.parent().removeClass('disabled');
+
+        if ($(this).hasClass('desktop')) {
+            $('.input-range.mobile').val($(this).val());
+        } else {
+            $('.input-range.desktop').val($(this).val());
+        }
     });
 
     // about-content text limited
@@ -61,28 +68,26 @@ $(document).ready(function () {
         $(this).toggleClass('open')
             .parent().find('.services__services-sub-list').slideToggle();
     });
-    if ($(document).width() <= 768) {
-        $('.services__services-menu-name').click(function () {
-            let this_btn = $(this);
-            if ($(this).hasClass('open')) {
-                $('.services__filter-block').slideUp(100);
-                $(this).parent().find('.services__services-list').slideUp(300);
-                setTimeout(function () {
-                    this_btn.removeClass('open');
-                }, 250);
-            } else {
-                $(this).addClass('open')
-                    .parent().find('.services__services-list').slideDown(300);
-                setTimeout(function () {
-                    $('.services__filter-block').slideDown(100);
-                }, 250)
-            }
-        });
-        $('.services__filter-name').click(function () {
-            $(this).toggleClass('open');
-            $('.services__label-range').slideToggle();
-        });
-    }
+    $('.mobile .services__services-menu-name').click(function () {
+        let this_btn = $(this);
+        if ($(this).hasClass('open')) {
+            $('.services__filter-block').slideUp(100);
+            $(this).parent().find('.services__services-list').slideUp(300);
+            setTimeout(function () {
+                this_btn.removeClass('open');
+            }, 250);
+        } else {
+            $(this).addClass('open')
+                .parent().find('.services__services-list').slideDown(300);
+            setTimeout(function () {
+                $('.services__filter-block').slideDown(100);
+            }, 250)
+        }
+    });
+    $('.mobile .services__filter-name').click(function () {
+        $(this).toggleClass('open');
+        $('.services__label-range').slideToggle();
+    });
 
     // burger menu
     $('.header__burger-menu-btn').click(function () {
@@ -195,9 +200,6 @@ $(document).ready(function () {
     // Disable filter
     $('.filter-disable').click(function () {
         $('.services__label-range').addClass('disabled');
-    });
-    $('.services__label-range').focusin(function () {
-        $(this).removeClass('disabled');
     });
 
 });
