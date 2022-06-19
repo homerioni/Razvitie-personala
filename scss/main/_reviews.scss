@@ -260,6 +260,21 @@
 
   &__arrow-right {
   }
+
+  &__review-doc-bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 14;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__review-doc {
+    display: none;
+  }
 }
 
 @media (max-width: 48em) {

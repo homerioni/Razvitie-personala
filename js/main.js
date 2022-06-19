@@ -206,11 +206,15 @@ $(document).ready(function () {
     $('.review-img').click(function () {
         $(this).find('.review-doc').fadeIn();
         $('.review-doc-bg').fadeIn();
+        console.log('123')
     });
     $('.review-doc-bg').click(function () {
         $(this).fadeOut();
         $('.review-doc').fadeOut();
     });
-    $('.review-page__img-box').click(function () {});
+    $('.review-img-slider').click(function () {
+        $('.review-doc-img-box').attr('src', $(this).find('.review-doc').attr('src'));
+        $('.review-doc-bg').fadeIn();
+    });
 
 });
