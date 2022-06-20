@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     // header функционал
-    $('.header__services-menu-name').click(function () {
+    $('.header__services-menu-name').hover(function () {
         $(this).toggleClass('open')
             .parent().find('.header__services-list').slideToggle();
     });
