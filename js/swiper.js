@@ -122,7 +122,7 @@ const offers_slider = new Swiper('.offers__slider', {
     },
 
     autoplay: {
-        delay: 5000,
+        delay: 7000,
         disableOnInteraction: true,
     },
 });
@@ -177,7 +177,7 @@ const reviews_slider = new Swiper('.reviews__slider', {
     },
 
     autoplay: {
-        delay: 5000,
+        delay: 9000,
         disableOnInteraction: true,
     },
 });
@@ -237,7 +237,7 @@ const partners_slider = new Swiper('.partners__slider', {
     },
 
     autoplay: {
-        delay: 5000,
+        delay: 7000,
         disableOnInteraction: true,
     },
 });
