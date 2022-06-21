@@ -59,7 +59,7 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
         },
 
         slideChange: function () {
-            if (!checkAnimPlay && $(window).width() > 768) {
+            if (!checkAnimPlay) {
                 $('.main-intro__box').each(function () {
                     let column = Number($(this).attr('column')),
                         row = Number($(this).attr('row'));
