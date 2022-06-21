@@ -63,8 +63,8 @@ const main_intro_slider = new Swiper('.main-intro__slider', {
                 $('.main-intro__box').each(function () {
                     let column = Number($(this).attr('column')),
                         row = Number($(this).attr('row'));
-                    // checkAnimPlay = true;
-                    // setTimeout(() => checkAnimPlay = false, 500);
+                    checkAnimPlay = true;
+                    setTimeout(() => checkAnimPlay = false, 500);
                     if (column === 0) {
                         if (row === 0) {
                             $(this).css('transform', 'translate3d(100%, 0, 0)');
