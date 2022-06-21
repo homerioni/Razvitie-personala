@@ -460,6 +460,7 @@
   }
 
   &__cart {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,6 +477,21 @@
         stroke: white;
       }
     }
+  }
+
+  &__cart-number {
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background-color: $red;
+    font-size: 1.8rem;
+    color: white;
   }
 
   &__search-label-mob,
@@ -669,6 +685,8 @@
     }
 
     &__mobile-cart {
+      position: relative;
+
       > svg {
         width: 4rem;
         height: 4rem;
@@ -677,6 +695,14 @@
           stroke: black;
         }
       }
+    }
+
+    &__cart-number {
+      left: -0.8rem;
+      bottom: -0.8rem;
+      width: 4rem;
+      height: 4rem;
+      font-size: 2.2rem;
     }
 
     &__burger-menu {

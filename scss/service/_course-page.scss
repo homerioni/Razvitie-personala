@@ -49,15 +49,17 @@
 
   &__text-block {
     flex: auto;
-    padding: 2rem 0;
+    padding: 1rem 0 3rem 0;
   }
 
   &__item-title {
     display: block;
+    width: 22rem;
     margin-bottom: 2rem;
     font-weight: 600;
     font-size: 2.4rem;
     line-height: 3rem;
+    word-wrap: break-word;
   }
 
   &__item-price {
@@ -141,9 +143,11 @@
     }
 
     &__text-block {
+      padding: 1rem 0 4rem 0;
     }
 
     &__item-title {
+      width: 39rem;
       margin-bottom: 3rem;
       font-size: 4rem;
       line-height: 5rem;
