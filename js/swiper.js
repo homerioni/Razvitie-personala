@@ -3,7 +3,7 @@ const rem = function (rem) {
     if ($(window).width() > 768) {
         return 0.005208335 * $(window).width() * rem;
     } else {
-        // где 375 это ширина моб версии макета
+        // где 414 это ширина моб версии макета
         return (100/414) * (0.1 * $(window).width()) * rem;
     }
 }
