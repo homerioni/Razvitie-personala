@@ -121,10 +121,10 @@ const offers_slider = new Swiper('.offers__slider', {
         prevEl: '.offers__arrow-left',
     },
 
-    autoplay: {
-        delay: 7000,
-        disableOnInteraction: true,
-    },
+    // autoplay: {
+    //     delay: 7000,
+    //     disableOnInteraction: true,
+    // },
 });
 
 let offers_current_slide = $('.offers__current-slide'),
@@ -176,10 +176,10 @@ const reviews_slider = new Swiper('.reviews__slider', {
         prevEl: '.reviews__arrow-left',
     },
 
-    autoplay: {
-        delay: 9000,
-        disableOnInteraction: true,
-    },
+    // autoplay: {
+    //     delay: 9000,
+    //     disableOnInteraction: true,
+    // },
 });
 
 let reviews_current_slide = $('.reviews__current-slide'),
@@ -236,10 +236,10 @@ const partners_slider = new Swiper('.partners__slider', {
         prevEl: '.partners__arrow-left',
     },
 
-    autoplay: {
-        delay: 7000,
-        disableOnInteraction: true,
-    },
+    // autoplay: {
+    //     delay: 7000,
+    //     disableOnInteraction: true,
+    // },
 });
 
 let partners_current_slide = $('.partners__current-slide'),
