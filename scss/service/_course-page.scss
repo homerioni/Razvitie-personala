@@ -78,11 +78,6 @@
       border-radius: 100%;
       background-color: $gray;
     }
-
-    &:after {
-      content: '₽';
-      margin-left: 0.6rem;
-    }
   }
 
   &__item-btn {

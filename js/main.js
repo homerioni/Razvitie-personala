@@ -217,4 +217,15 @@ $(document).ready(function () {
         $('.review-doc-bg').fadeIn();
     });
 
+    // modal-cart
+    $('.modal-cart').css('display', 'flex').hide();
+    $('.buy').click(function () {
+        $('.modal-cart').fadeIn(200);
+        $('body').addClass('lock');
+    });
+    $('.modal-cart .close').click(function () {
+        $('.modal-cart').fadeOut(150);
+        $('body').removeClass('lock');
+    });
+
 });
