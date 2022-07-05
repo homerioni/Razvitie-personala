@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="another website">
-    <title>Оформление заказа</title>
+    <title>Корзина</title>
 
     <link rel="stylesheet" href="font/stylesheet.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -409,129 +409,22 @@
         <svg class="page-pagination__arrow" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.65019 8.65399L2.35445 14.9476C2.0782 15.2232 1.63062 15.2232 1.35367 14.9476C1.07742 14.6721 1.07742 14.2245 1.35367 13.9489L7.15004 8.15468L1.35437 2.3604C1.07812 2.08485 1.07812 1.63728 1.35437 1.36102C1.63062 1.08547 2.0789 1.08547 2.35515 1.36102L8.65089 7.65467C8.92295 7.92737 8.92295 8.38198 8.65019 8.65399Z" stroke-width="0.5"/>
         </svg>
-        <a href="#" class="page-pagination__page page-pagination__page--old">Корзина</a>
-        <svg class="page-pagination__arrow" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.65019 8.65399L2.35445 14.9476C2.0782 15.2232 1.63062 15.2232 1.35367 14.9476C1.07742 14.6721 1.07742 14.2245 1.35367 13.9489L7.15004 8.15468L1.35437 2.3604C1.07812 2.08485 1.07812 1.63728 1.35437 1.36102C1.63062 1.08547 2.0789 1.08547 2.35515 1.36102L8.65089 7.65467C8.92295 7.92737 8.92295 8.38198 8.65019 8.65399Z" stroke-width="0.5"/>
-        </svg>
-        <div class="page-pagination__page page-pagination__page--current">Оформление заказа</div>
+        <div class="page-pagination__page page-pagination__page--current">Корзина</div>
     </div>
 </div>
 
 <main>
-    <section class="calculate calculate--order">
+    <section class="cart">
         <div class="container">
-            <div class="calculate__section-title">Оформление заказа</div>
-            <form class="calculate__form">
-                <div class="calculate__block">
-                    <div class="calculate__title">Кто будет являться заказчиком? (плательщиком)</div>
-                    <label class="calculate__item calculate__label-select">
-                        <div class="calculate__input-name">Кем Вы являетесь?</div>
-                        <select class="calculate__input calculate__input--select">
-                            <option value="individual">Физическое лицо</option>
-                            <option value="corporate">Юридическое лицо</option>
-                        </select>
-                        <svg viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.50031 8.5037L1.20667 2.20797C0.931111 1.93171 0.931111 1.48414 1.20667 1.20719C1.48222 0.930937 1.92979 0.930937 2.20535 1.20719L7.99962 7.00356L13.7939 1.20789C14.0694 0.931635 14.517 0.931635 14.7933 1.20789C15.0688 1.48414 15.0688 1.93241 14.7933 2.20866L8.49963 8.5044C8.22692 8.77647 7.77232 8.77647 7.50031 8.5037Z" stroke-width="0.5"/>
-                        </svg>
-
-                        <label class="calculate__input-select-btn-load calculate__item--corporate">
-                            <input type="file">
-                            <span>Загрузить реквизиты</span>
-                        </label>
-                    </label>
-                    <label class="calculate__item calculate__label-input required">
-                        <div class="calculate__input-name">Ваше имя*</div>
-                        <svg viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.66216 9C6.56081 8.98985 6.43919 8.98985 6.3277 9C3.91554 8.91883 2 6.94025 2 4.50507C2 2.01917 4.00676 0 6.5 0C8.98311 0 11 2.01917 11 4.50507C10.9899 6.94025 9.07432 8.91883 6.66216 9Z" /><path d="M1.72984 12.2734C-0.576613 13.7765 -0.576613 16.2259 1.72984 17.7196C4.35081 19.4268 8.64919 19.4268 11.2702 17.7196C13.5766 16.2166 13.5766 13.7672 11.2702 12.2734C8.65872 10.5755 4.36034 10.5755 1.72984 12.2734Z" />
-                        </svg>
-                        <input type="text" class="calculate__input calculate__input--text">
-                    </label>
-                    <label class="calculate__item calculate__label-input required">
-                        <div class="calculate__input-name">Ваш телефон*</div>
-                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.97 16.33C19.97 16.69 19.89 17.06 19.72 17.42C19.55 17.78 19.33 18.12 19.04 18.44C18.55 18.98 18.01 19.37 17.4 19.62C16.8 19.87 16.15 20 15.45 20C14.43 20 13.34 19.76 12.19 19.27C11.04 18.78 9.89 18.12 8.75 17.29C7.6 16.45 6.51 15.52 5.47 14.49C4.44 13.45 3.51 12.36 2.68 11.22C1.86 10.08 1.2 8.94 0.72 7.81C0.24 6.67 0 5.58 0 4.54C0 3.86 0.12 3.21 0.36 2.61C0.6 2 0.98 1.44 1.51 0.94C2.15 0.31 2.85 0 3.59 0C3.87 0 4.15 0.0600001 4.4 0.18C4.66 0.3 4.89 0.48 5.07 0.74L7.39 4.01C7.57 4.26 7.7 4.49 7.79 4.71C7.88 4.92 7.93 5.13 7.93 5.32C7.93 5.56 7.86 5.8 7.72 6.03C7.59 6.26 7.4 6.5 7.16 6.74L6.4 7.53C6.29 7.64 6.24 7.77 6.24 7.93C6.24 8.01 6.25 8.08 6.27 8.16C6.3 8.24 6.33 8.3 6.35 8.36C6.53 8.69 6.84 9.12 7.28 9.64C7.73 10.16 8.21 10.69 8.73 11.22C9.27 11.75 9.79 12.24 10.32 12.69C10.84 13.13 11.27 13.43 11.61 13.61C11.66 13.63 11.72 13.66 11.79 13.69C11.87 13.72 11.95 13.73 12.04 13.73C12.21 13.73 12.34 13.67 12.45 13.56L13.21 12.81C13.46 12.56 13.7 12.37 13.93 12.25C14.16 12.11 14.39 12.04 14.64 12.04C14.83 12.04 15.03 12.08 15.25 12.17C15.47 12.26 15.7 12.39 15.95 12.56L19.26 14.91C19.52 15.09 19.7 15.3 19.81 15.55C19.91 15.8 19.97 16.05 19.97 16.33Z" />
-                        </svg>
-                        <input type="tel" class="calculate__input calculate__input--text input-phone">
-                    </label>
-                    <label class="calculate__item calculate__label-input required">
-                        <div class="calculate__input-name">Ваш E-mail*</div>
-                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.3346 7.17301V13.958C18.3347 14.6498 18.07 15.3154 17.5949 15.8182C17.1198 16.321 16.4703 16.623 15.7796 16.6622L15.6263 16.6663H4.3763C3.68452 16.6664 3.01894 16.4017 2.51611 15.9266C2.01327 15.4515 1.7113 14.802 1.67214 14.1113L1.66797 13.958V7.17301L9.7113 11.3863C9.80078 11.4332 9.90029 11.4577 10.0013 11.4577C10.1023 11.4577 10.2018 11.4332 10.2913 11.3863L18.3346 7.17301ZM4.3763 3.33301H15.6263C16.2976 3.33293 16.945 3.58217 17.443 4.0324C17.941 4.48262 18.254 5.10174 18.3213 5.76967L10.0013 10.128L1.6813 5.76967C1.7459 5.12827 2.03718 4.53094 2.50276 4.08506C2.96834 3.63918 3.5777 3.374 4.2213 3.33717L4.3763 3.33301H15.6263H4.3763Z" />
-                        </svg>
-                        <input type="email" class="calculate__input calculate__input--text">
-                    </label>
-                    <label class="calculate__item calculate__label-input">
-                        <div class="calculate__input-name">СНИЛС</div>
-                        <svg viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.49961 0.299805V5.4748C7.49961 5.9323 7.68135 6.37106 8.00485 6.69456C8.32835 7.01806 8.76711 7.1998 9.22461 7.1998H14.3996V16.9748C14.3996 17.4323 14.2179 17.8711 13.8944 18.1946C13.5709 18.5181 13.1321 18.6998 12.6746 18.6998H2.32461C1.86711 18.6998 1.42835 18.5181 1.10485 18.1946C0.78135 17.8711 0.599609 17.4323 0.599609 16.9748V2.0248C0.599609 1.56731 0.78135 1.12855 1.10485 0.805046C1.42835 0.481545 1.86711 0.299805 2.32461 0.299805H7.49961ZM8.64961 0.587305V5.4748C8.64961 5.6273 8.71019 5.77356 8.81802 5.88139C8.92586 5.98922 9.07211 6.0498 9.22461 6.0498H14.1121L8.64961 0.587305Z" />
-                        </svg>
-                        <input type="text" class="calculate__input calculate__input--text mask-snils">
-                    </label>
-                    <label class="calculate__item calculate__label-input">
-                        <div class="calculate__input-name">Данные диплома о образовании</div>
-                        <svg viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 6.19981V0.799805L10.5 0.799805L10.5 15.1998L18 15.1998C18.663 15.1998 19.2989 14.9469 19.7678 14.4969C20.2366 14.0468 20.5 13.4363 20.5 12.7998L20.5 7.99981L14.875 7.99981C14.3777 7.99981 13.9008 7.81016 13.5492 7.4726C13.1975 7.13503 13 6.6772 13 6.19981ZM9.25 15.1998L3 15.1998C2.33696 15.1998 1.70107 14.9469 1.23223 14.4969C0.763392 14.0468 0.5 13.4363 0.5 12.7998L0.5 3.19981C0.5 2.56329 0.763392 1.95284 1.23223 1.50275C1.70107 1.05266 2.33696 0.799805 3 0.799805L9.25 0.799805L9.25 15.1998ZM14.25 6.19981V0.869405C14.5525 0.953405 14.8312 1.1094 15.0575 1.3266L19.9513 6.02461C20.1775 6.24061 20.34 6.50941 20.4262 6.79981L14.875 6.79981C14.7092 6.79981 14.5503 6.73659 14.4331 6.62407C14.3158 6.51155 14.25 6.35894 14.25 6.19981Z" />
-                        </svg>
-                        <input type="text" class="calculate__input calculate__input--text mask-diplom">
-                    </label>
-                    <label class="calculate__item calculate__label-input calculate__item--corporate">
-                        <div class="calculate__input-name">ИНН*</div>
-                        <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.30078 11.5004L7.47578 11.5004C7.93328 11.5004 8.37204 11.3186 8.69554 10.9951C9.01904 10.6716 9.20078 10.2329 9.20078 9.77539L9.20078 4.60039L18.9758 4.60039C19.4333 4.60039 19.872 4.78213 20.1955 5.10563C20.519 5.42913 20.7008 5.86789 20.7008 6.32539L20.7008 16.6754C20.7008 17.1329 20.519 17.5716 20.1955 17.8951C19.872 18.2186 19.4333 18.4004 18.9758 18.4004L4.02578 18.4004C3.56828 18.4004 3.12952 18.2187 2.80602 17.8952C2.48252 17.5716 2.30078 17.1329 2.30078 16.6754L2.30078 11.5004ZM2.58828 10.3504L7.47578 10.3504C7.62828 10.3504 7.77453 10.2898 7.88237 10.182C7.9902 10.0741 8.05078 9.92789 8.05078 9.77539L8.05078 4.88789L2.58828 10.3504Z" />
-                        </svg>
-                        <input type="number" class="calculate__input calculate__input--text">
-                    </label>
-                    <label class="calculate__item calculate__label-input calculate__item--corporate">
-                        <div class="calculate__input-name">Наименование организации*</div>
-                        <svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.7008 9.5L5.30078 9.5L5.30078 12L19.7008 12L19.7008 4.5C19.7008 3.83696 19.4479 3.20108 18.9978 2.73223C18.5478 2.26339 17.9373 2 17.3008 2L12.5008 2L12.5008 7.625C12.5008 8.12228 12.3111 8.5992 11.9736 8.95083C11.636 9.30246 11.1782 9.5 10.7008 9.5ZM19.7008 13.25L19.7008 19.5C19.7008 20.163 19.4479 20.7989 18.9978 21.2678C18.5478 21.7366 17.9373 22 17.3008 22L7.70078 22C7.06426 22 6.45381 21.7366 6.00372 21.2678C5.55364 20.7989 5.30078 20.163 5.30078 19.5L5.30078 13.25L19.7008 13.25ZM10.7008 8.25L5.37038 8.25C5.45438 7.9475 5.61038 7.66875 5.82758 7.4425L10.5256 2.54875C10.7416 2.3225 11.0104 2.16 11.3008 2.07375L11.3008 7.625C11.3008 7.79076 11.2376 7.94973 11.125 8.06694C11.0125 8.18415 10.8599 8.25 10.7008 8.25Z" />
-                        </svg>
-                        <input type="text" class="calculate__input calculate__input--text">
-                    </label>
-                    <div class="calculate__item calculate__pay-option">
-                        <div class="calculate__title">Выберите способ оплаты</div>
-                        <div class="calculate__pay-image-block">
-                            <label class="calculate__pay-item">
-                                <input type="radio" name="pay-option">
-                                <img src="img/visa.svg" alt="">
-                            </label>
-                            <label class="calculate__pay-item">
-                                <input type="radio" name="pay-option">
-                                <img src="img/mastercard.svg" alt="">
-                            </label>
-                            <label class="calculate__pay-item">
-                                <input type="radio" name="pay-option">
-                                <img src="img/mir.svg" alt="">
-                            </label>
-                            <label class="calculate__pay-item">
-                                <input type="radio" name="pay-option">
-                                <span>Наличные</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="calculate__item calculate__total-sum">
-                        <span>Итоговая сумма:</span>
-                        <span class="calculate__total-sum--bold">1 234 567 ₽</span>
-                    </div>
-                    <div class="calculate__confirm-block">
-                        <button class="calculate__btn">
-                            <span>Отправить заявку</span>
-                            <svg viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24.5 7.5H1" stroke-width="2" stroke-linecap="round"/><path d="M18.5 1C18.5 1 19 3.36364 20.5 5C22.1874 6.84075 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/><path d="M18.5 14C18.5 14 19 11.6364 20.5 10C22.1874 8.15925 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                        <label class="calculate__label-checkbox label-checkbox check">
-                            <input type="checkbox" class="calculate__checkbox" checked>
-                            <div class="calculate__checkbox-check">
-                                <svg viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17 1.1543L6 12.1543L1 7.1543" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span>Согласие на обработку персональных данных</span>
-                        </label>
-                    </div>
+            <div class="cart__empty-block">
+                <div class="cart__empty-img">
+                    <img src="img/empty_cart.svg" alt="">
                 </div>
-            </form>
+                <div class="cart__empty-title">Ваша корзина пуста</div>
+                <div class="cart__empty-desc">
+                    <a href="#">Перейти в каталог</a>, <span>чтобы продолжить покупки</span>
+                </div>
+            </div>
         </div>
     </section>
 </main>

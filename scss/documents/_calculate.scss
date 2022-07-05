@@ -109,6 +109,18 @@
         fill: #B9BECD;
       }
     }
+
+    &.required {
+      &:before {
+        content: 'Поле не заполнено';
+        position: absolute;
+        left: 3.5rem;
+        bottom: 1.8rem;
+        font-weight: 600;
+        font-size: 2rem;
+        color: $red;
+      }
+    }
   }
 
   &__label-checkbox {
@@ -143,6 +155,7 @@
   }
 
   &__input {
+    position: relative;
     width: 100%;
     height: 6rem;
     font-weight: 600;

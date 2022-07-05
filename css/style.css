@@ -1196,7 +1196,7 @@ body {
 }
 @media (max-width: 48em) {
   body {
-    padding-bottom: 181.2rem;
+    padding-bottom: 203.2rem;
   }
 }
 
@@ -1490,9 +1490,7 @@ body {
   left: 0;
   top: 0;
   z-index: 11;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6333,6 +6331,15 @@ body {
 .calculate__label-input > svg path {
   fill: #B9BECD;
 }
+.calculate__label-input.required:before {
+  content: "Поле не заполнено";
+  position: absolute;
+  left: 3.5rem;
+  bottom: 1.8rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #CD010C;
+}
 .calculate__label-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6367,6 +6374,7 @@ body {
   color: #757988;
 }
 .calculate__input {
+  position: relative;
   width: 100%;
   height: 6rem;
   font-weight: 600;
@@ -8649,9 +8657,6 @@ body {
   font-size: 3.4rem;
   line-height: 4.3rem;
 }
-.cart__price:after {
-  content: " ₽";
-}
 .cart__item-delete {
   width: 3.5rem;
   height: 3.5rem;
@@ -8719,8 +8724,44 @@ body {
   line-height: 4.3rem;
   color: #CD010C;
 }
-.cart__total:after {
-  content: " ₽";
+.cart__empty-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart__empty-img {
+  width: 20rem;
+  height: 17.7rem;
+  margin-bottom: 4rem;
+}
+.cart__empty-img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart__empty-title {
+  margin-bottom: 4rem;
+  font-weight: 500;
+  font-size: 4.4rem;
+  line-height: 5.6rem;
+  color: #757988;
+}
+.cart__empty-desc {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.cart__empty-desc > a {
+  color: #CD010C;
+  border-bottom: 1px solid #CD010C;
 }
 
 @media (max-width: 48em) {
@@ -8833,6 +8874,33 @@ body {
   .cart__total {
     font-size: 6.8rem;
     line-height: 8.6rem;
+  }
+  .cart__empty-block {
+    margin-top: 10rem;
+  }
+  .cart__empty-img {
+    width: 30rem;
+    height: 26.5rem;
+    margin-bottom: 5rem;
+  }
+  .cart__empty-img > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .cart__empty-title {
+    margin-bottom: 5rem;
+    font-size: 6rem;
+    line-height: 7.6rem;
+  }
+  .cart__empty-desc {
+    font-size: 3.4rem;
+    line-height: 5rem;
+    text-align: center;
+  }
+  .cart__empty-desc > span {
+    display: block;
   }
 }
 .login {
