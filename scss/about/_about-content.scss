@@ -2,6 +2,7 @@
 
 .about-content {
   margin-bottom: 20rem;
+  text-align: center;
 
   &__title {
     margin-bottom: 5rem;
@@ -43,8 +44,8 @@
 
   &__list {
     > li {
-      margin-left: 4rem;
-      margin-bottom: 0.5rem;
+      width: fit-content;
+      margin: 0 auto 0.5rem auto;
       list-style-type: disc;
 
       &::marker {
@@ -62,7 +63,7 @@
     align-items: center;
     width: 38.4rem;
     height: 6rem;
-    margin-top: 8rem;
+    margin: 8rem auto 0 auto;
     border-radius: 3rem 0 0 0;
     background-color: $blue;
     font-weight: bold;
@@ -85,6 +86,7 @@
 @media (max-width: 48em) {
   .about-content {
     margin-bottom: 32rem;
+    text-align: left;
 
     &--limited {
       position: relative;
@@ -119,8 +121,7 @@
 
     &__list {
       > li {
-        margin-left: 6rem;
-        margin-bottom: 0;
+        margin: 0 0 0 6rem;
 
         &::marker {
           font-size: 3.4rem;

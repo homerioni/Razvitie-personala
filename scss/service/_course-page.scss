@@ -18,27 +18,31 @@
   &__item {
     position: relative;
     display: flex;
-    align-items: center;
-    width: 46.3rem;
+    width: 47rem;
     min-height: 22.4rem;
-    padding: 2rem;
+    padding: 2rem 1rem 2rem 2rem;
     border-radius: 3rem;
     background-color: white;
 
-    &:not(:nth-child(3n)) {
-      margin-right: 1.5rem;
+    &:nth-child(3n + 1) {
+      margin-right: 1rem;
+    }
+
+    &:nth-child(3n) {
+      margin-left: auto;
     }
 
     &:nth-child(n + 4) {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
   }
 
   &__img-box {
     flex: none;
-    width: 20rem;
-    height: 17rem;
-    margin-right: 2rem;
+    align-self: center;
+    width: 18rem;
+    height: 18rem;
+    margin-right: 1.5rem;
 
     > img {
       width: 100%;
@@ -54,11 +58,10 @@
 
   &__item-title {
     display: block;
-    width: 22rem;
     margin-bottom: 2rem;
     font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
     word-wrap: break-word;
   }
 
@@ -119,11 +122,15 @@
     &__item {
       width: 100%;
       min-height: 38rem;
-      padding: 4rem;
+      padding: 4rem 2rem 4rem 4rem;
       border-radius: 6rem;
 
-      &:not(:nth-child(3n)) {
+      &:nth-child(3n + 1) {
         margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-left: 0;
       }
 
       &:nth-child(n + 2) {
@@ -132,8 +139,8 @@
     }
 
     &__img-box {
-      width: 28rem;
-      height: 24rem;
+      width: 24rem;
+      height: 30rem;
       margin-right: 3rem;
     }
 
@@ -142,10 +149,9 @@
     }
 
     &__item-title {
-      width: 39rem;
       margin-bottom: 3rem;
-      font-size: 4rem;
-      line-height: 5rem;
+      font-size: 3.6rem;
+      line-height: 4.6rem;
     }
 
     &__item-price {

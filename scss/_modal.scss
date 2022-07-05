@@ -1,6 +1,7 @@
 @import "param";
 
-.modal-cart {
+.modal-cart,
+.modal-sent {
   position: fixed;
   left: 0;
   top: 0;
@@ -117,8 +118,90 @@
   }
 }
 
+.notice {
+  position: fixed;
+  right: 4rem;
+  top: 4rem;
+  z-index: 20;
+  display: flex;
+  width: 50rem;
+  transform: translateY(calc(-100% - 10rem));
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 2rem;
+  border: 0.6rem solid #D3D6E1;
+  background-color: white;
+  box-shadow: 1rem 1rem 4rem 0 rgba(34, 60, 80, 0.2);
+  transition: transform 0.4s ease;
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: block;
+      width: 100%;
+      height: 1px;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: $red;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: block;
+      width: 100%;
+      height: 1px;
+      transform: translateY(-50%) rotate(-45deg);
+      background-color: $red;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text-block {
+    flex: auto;
+    padding-top: 1.5rem;
+  }
+
+  &__title {
+    width: 31rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: $gray;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
 @media (max-width: 48em) {
-  .modal-cart {
+  .modal-cart,
+  .modal-sent {
     &__bg {
     }
 
@@ -180,6 +263,39 @@
       &:not(:last-child) {
         margin-bottom: 4rem;
       }
+    }
+  }
+
+  .notice {
+    left: 4rem;
+    width: calc(100% - 8rem);
+    padding: 1rem 2rem 4rem 2rem;
+
+    &__close {
+      right: 3rem;
+      top: 2.4rem;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &__icon {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    &__text-block {
+      padding-top: 2.4rem;
+    }
+
+    &__title {
+      width: 53rem;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+
+    &__text {
+      font-size: 3rem;
+      line-height: 2.4rem;
     }
   }
 }

@@ -217,10 +217,16 @@ $(document).ready(function () {
         $('.review-doc-bg').fadeIn();
     });
 
-    // modal-cart
-    $('.modal-cart .close').click(function () {
-        $('.modal-cart').hide();
+    // modal
+    $('.modal-cart .close, .modal-sent .close').click(function () {
+        $('.modal-cart, .modal-sent').hide();
         $('body').removeClass('lock');
+    });
+
+    // order-pay
+    $('.order-pay input').change(function () {
+        $('.order-pay').removeClass('active');
+        $(this).parent().addClass('active');
     });
 
 });
