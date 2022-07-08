@@ -3,10 +3,6 @@
 $(document).ready(function () {
 
     // header функционал
-    $('.header__services-menu-name').hover(function () {
-        $(this).toggleClass('open')
-            .parent().find('.header__services-list').slideToggle();
-    });
     $('.header__services-item-name').click(function () {
         $(this).toggleClass('open')
             .parent().find('.header__services-sub-list').slideToggle();
@@ -227,6 +223,19 @@ $(document).ready(function () {
     $('.order-pay input').change(function () {
         $('.order-pay').removeClass('active');
         $(this).parent().addClass('active');
+    });
+
+    // img for about-intro--service
+    let contentHeight = $('.about-intro').height() + rem(10);
+    $('.about-intro__img-box').css('max-height', contentHeight + 'px');
+
+    $(window).resize(function () {
+        contentHeight = $('.about-intro').height() + rem(10);
+        if ($(window).width() > 768) {
+            $('.about-intro__img-box').css('max-height', contentHeight + 'px');
+        } else {
+            $('.about-intro__img-box').css('max-height', 'auto');
+        }
     });
 
 });

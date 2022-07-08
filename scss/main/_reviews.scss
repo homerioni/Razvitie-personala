@@ -10,7 +10,7 @@
     left: 0;
     bottom: 0;
     z-index: -1;
-    width: 110rem;
+    width: 128rem;
     height: 75%;
     background-color: #fff;
   }
@@ -144,7 +144,8 @@
 
   &__slider {
     min-height: 45rem;
-    margin-right: -24.5rem;
+    //margin-right: -24.5rem;
+    margin-right: -41.8rem;
     margin-top: -31rem;
     padding-top: 31rem;
   }
@@ -279,7 +280,7 @@
 
 @media (max-width: 48em) {
   .reviews {
-    margin-bottom: 32rem;
+    margin-bottom: 20rem;
     padding-bottom: 10rem;
 
     &__bg {

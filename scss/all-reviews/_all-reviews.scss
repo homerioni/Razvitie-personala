@@ -102,7 +102,9 @@
     }
   }
 
-  &__cards {
+  &__cards {}
+
+  &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -216,6 +218,9 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+  &__navigation-block {
+  }
+
   .all-reviews__review-doc {
     display: none;
     position: fixed;
@@ -231,12 +236,12 @@
 
 @media (max-width: 48em) {
   .all-reviews {
-    margin-bottom: 32rem;
+    margin-bottom: 20rem;
 
     &__title-content {
       flex-direction: column;
       justify-content: normal;
-      margin-bottom: 45rem;
+      margin-bottom: 0;
     }
 
     &__text-block {
@@ -310,7 +315,10 @@
     }
 
     &__cards {
+      margin-bottom: 10rem;
     }
+
+    &__wrapper {}
 
     &__item {
       flex-direction: column;
@@ -378,6 +386,9 @@
     }
 
     &__review-doc-bg {
+    }
+
+    &__navigation-block {
     }
 
     .all-reviews__review-doc {

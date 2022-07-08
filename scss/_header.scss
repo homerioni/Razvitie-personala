@@ -280,6 +280,13 @@
     cursor: pointer;
 
     &.open {
+    }
+
+    &:hover {
+      .header__services-list {
+        max-height: 140rem;
+      }
+
       &:after {
         content: '';
         position: absolute;
@@ -348,14 +355,16 @@
   }
 
   &__services-list {
-    display: none;
     position: absolute;
     top: 7rem;
     left: 0;
     z-index: 2;
     width: 37.4rem;
+    max-height: 0;
     border-radius: 3rem 0 0 0;
     background-color: #fff;
+    overflow: scroll;
+    transition: 0.5s ease-in-out;
   }
 
   &__services-item {

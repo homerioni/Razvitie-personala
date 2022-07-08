@@ -1,7 +1,8 @@
 // Пересчет rem в px для swiper
 const rem = function (rem) {
     if ($(window).width() > 768) {
-        return 0.005208335 * $(window).width() * rem;
+        // return 0.005208335 * $(window).width() * rem;
+        return 0.004408335 * $(window).width() * rem;
     } else {
         // где 414 это ширина моб версии макета
         return (100/414) * (0.1 * $(window).width()) * rem;
@@ -158,7 +159,7 @@ const reviews_slider = new Swiper('.reviews__slider', {
 
     breakpoints: {
         769: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.9,
         },
         0: {
             slidesPerView: 1,
@@ -452,3 +453,54 @@ news_slider.on('slideChange', function () {
         news_current_slide.text(news_slider.realIndex + 1);
     }
 });
+
+if ($(window).width() <= 768) {
+    $('.all-reviews__cards').addClass('swiper');
+    $('.all-reviews__wrapper').addClass('swiper-wrapper').removeClass('all-reviews__wrapper');
+    $('.all-reviews__item').addClass('swiper-slide');
+
+    let all_reviews_slider = new Swiper('.all-reviews__cards', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: rem(4.6),
+        slidesPerView: 1,
+
+        pagination: {
+            el: '.all-reviews__pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.all-reviews__arrow-right',
+            prevEl: '.all-reviews__arrow-left',
+        },
+
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: true,
+        },
+    });
+
+    let all_reviews_current_slide = $('.all-reviews__current-slide'),
+        all_reviews_slides = $('.all-reviews__pagination').find('.swiper-pagination-bullet').length;
+
+    if (all_reviews_slides < 10) {
+        $('.all-reviews__total-slide').text('0' + all_reviews_slides);
+    } else {
+        $('.all-reviews__total-slide').text(all_reviews_slides);
+    }
+    if (all_reviews_slider.realIndex < 9) {
+        all_reviews_current_slide.text('0' + (all_reviews_slider.realIndex + 1));
+    } else {
+        all_reviews_current_slide.text(all_reviews_slider.realIndex + 1);
+    }
+
+    all_reviews_slider.on('slideChange', function () {
+        if (all_reviews_slider.realIndex < 9) {
+            all_reviews_current_slide.text('0' + (all_reviews_slider.realIndex + 1));
+        } else {
+            all_reviews_current_slide.text(all_reviews_slider.realIndex + 1);
+        }
+    });
+}

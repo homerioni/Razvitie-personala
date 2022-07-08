@@ -5,13 +5,20 @@
 }
 html {
     font-family: "Euclid Circular A"; // шрифт по умолчанию по сайту
-    font-size: 0.5208335vw; // на разрешении 1920 0.520835vw === 10px
+    //font-size: 0.5208335vw; // на разрешении 1920 0.520835vw === 10px
     font-style: normal;
     font-weight: normal;
     -webkit-animation: bugfix infinite 1s;
     line-height: 1.2;
     margin: 0;
     padding: 0;
+
+    // Правки для уменьшения контейнера уже после верстки дизайна
+    font-size: 0.4408335vw;
+
+    @media (max-width: 1200px) {
+        font-size: 0.5208335vw;
+    }
 }
 
 body {
