@@ -226,11 +226,11 @@ $(document).ready(function () {
     });
 
     // img for about-intro--service
-    let contentHeight = $('.about-intro').height() + rem(10);
+    let contentHeight = $('.about-intro').height();
     $('.about-intro__img-box').css('max-height', contentHeight + 'px');
 
     $(window).resize(function () {
-        contentHeight = $('.about-intro').height() + rem(10);
+        contentHeight = $('.about-intro').height();
         if ($(window).width() > 768) {
             $('.about-intro__img-box').css('max-height', contentHeight + 'px');
         } else {

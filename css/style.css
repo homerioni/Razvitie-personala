@@ -4576,8 +4576,14 @@ body {
 }
 @media (min-width: 48.01em) {
   .about-intro--service .about-intro__img-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 66rem;
-    margin: 0 0 0 2rem;
+    margin: 0 0 10rem 2rem;
     float: right;
   }
   .about-intro--service .about-intro__img-box > img {
