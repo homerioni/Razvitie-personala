@@ -845,6 +845,9 @@ input[type=number] {
 .header__search-input::placeholder {
   color: #757988;
 }
+.header__search-input:invalid + button {
+  display: none;
+}
 .header__search-icon {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -917,6 +920,52 @@ input[type=number] {
 }
 .header__search-label-mob, .header__search-bg-mob {
   display: none;
+}
+.header__search-del {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+  background-color: #E9EBF2;
+}
+.header__search-del > span {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.header__search-del > span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  background-color: #292D32;
+}
+.header__search-del > span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  background-color: #292D32;
 }
 
 @media (max-width: 48em) {
@@ -9184,6 +9233,16 @@ body {
   margin-top: 5rem;
   margin-bottom: 20rem;
 }
+.login--reg button.calculate__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.login--reg .login__confirm-block {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .login__content-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9275,6 +9334,13 @@ body {
 @media (max-width: 48em) {
   .login {
     margin-top: 10rem;
+  }
+  .login--reg button.calculate__btn {
+    width: 100%;
+    padding: 0;
+  }
+  .login--reg button.calculate__btn > svg {
+    margin-left: 5rem;
   }
   .login__content-bg {
     padding: 8rem 0;

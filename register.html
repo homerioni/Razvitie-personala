@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="another website">
-    <title>Восстановление пароля</title>
+    <title>Страница входа</title>
 
     <link rel="stylesheet" href="font/stylesheet.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -400,29 +400,43 @@
 </header>
 
 <main>
-    <section class="login">
+    <section class="login login--reg">
         <div class="container">
             <div class="login__content-bg">
                 <form class="login__content">
                     <div class="login__logo">
                         <img src="img/logo.svg" alt="">
                     </div>
-                    <div class="login__title">Восстановление пароля</div>
+                    <div class="login__title">Вход в личный кабинет</div>
+                    <label class="login__label">
+                        <div class="login__label-name">Ваше имя</div>
+                        <input type="text" class="login__input">
+                    </label>
+                    <label class="login__label">
+                        <div class="login__label-name">E-mail</div>
+                        <input type="email" class="login__input">
+                    </label>
                     <label class="login__label">
                         <div class="login__label-name">Логин</div>
                         <input type="text" class="login__input">
                     </label>
-                    <div class="login__sub-text">
-                        Пароль будет отправлен на указанную при регистрации почту
-                    </div>
-                    <div class="login__confirm-block login__confirm-block--center calculate__confirm-block">
+                    <label class="login__label">
+                        <div class="login__label-name">Пароль</div>
+                        <input type="password" class="login__input">
+                    </label>
+                    <label class="login__label">
+                        <div class="login__label-name">Повторите пароль</div>
+                        <input type="password" class="login__input">
+                    </label>
+                    <div class="login__confirm-block calculate__confirm-block">
                         <button class="calculate__btn">
-                            <span>Отправить</span>
+                            <span>Зарегистрироваться</span>
                             <svg viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.5 7.5H1" stroke-width="2" stroke-linecap="round"/><path d="M18.5 1C18.5 1 19 3.36364 20.5 5C22.1874 6.84075 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/><path d="M18.5 14C18.5 14 19 11.6364 20.5 10C22.1874 8.15925 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
                     </div>
+                    <a href="#" class="login__forgot">Уже есть учетная запись? Войти</a>
                 </form>
             </div>
         </div>

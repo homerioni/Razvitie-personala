@@ -134,10 +134,6 @@ $(document).ready(function () {
         $(this).parent().parent().find('.calculate__input').removeAttr('disabled');
         $(this).parent().find('.calculate__btn').css('display', 'flex');
     });
-    $('.personal__buttons .calculate__btn').click(function () {
-        $(this).parent().parent().find('.calculate__input').attr('disabled', 'disabled');
-        $(this).parent().find('.calculate__btn').hide();
-    });
     $('textarea.calculate__input').each(function () {
         $(this)[0].style.height = 'auto';
         $(this)[0].style.height = $(this)[0].scrollHeight + 2 + "px";
@@ -236,6 +232,11 @@ $(document).ready(function () {
         } else {
             $('.about-intro__img-box').css('max-height', 'auto');
         }
+    });
+
+    // Search
+    $('.header__search-del').click(function () {
+        $('.header__search-input').val('');
     });
 
 });

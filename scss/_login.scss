@@ -4,6 +4,16 @@
   margin-top: 5rem;
   margin-bottom: 20rem;
 
+  &--reg {
+    button.calculate__btn {
+      width: fit-content;
+    }
+
+    .login__confirm-block {
+      justify-content: center;
+    }
+  }
+
   &__content-bg {
     display: flex;
     justify-content: center;
@@ -99,6 +109,17 @@
 @media (max-width: 48em) {
   .login {
     margin-top: 10rem;
+
+    &--reg {
+      button.calculate__btn {
+        width: 100%;
+        padding: 0;
+
+        > svg {
+          margin-left: 5rem;
+        }
+      }
+    }
 
     &__content-bg {
       padding: 8rem 0;
