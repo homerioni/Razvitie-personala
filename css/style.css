@@ -9243,6 +9243,52 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.login--restore .login__title {
+  margin-bottom: 1rem;
+  font-size: 4.4rem;
+}
+.login--restore .login__sub-text {
+  margin-bottom: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-align: center;
+}
+.login--restore .login__confirm-block {
+  margin: 5rem 0 2rem 0;
+}
+.login--restore .login__complete {
+  padding: 7rem 12rem 24rem 12rem;
+}
+.login--restore .complete__title {
+  margin-bottom: 1rem;
+}
+.login--restore .complete__text {
+  width: 59rem;
+  margin-bottom: 7.5rem;
+  line-height: 3.2rem;
+}
+.login--restore .calculate__btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+.login--restore .calculate__btn > svg {
+  margin-left: 4rem;
+}
+.login--new-pass .login__title {
+  margin-bottom: 3.5rem;
+  font-size: 4.4rem;
+}
+.login--new-pass .calculate__btn {
+  padding: 0 3rem;
+}
+.login--new-pass .calculate__btn > svg {
+  margin-left: 2rem;
+}
+.login--new-pass .login__confirm-block {
+  margin-bottom: 0;
+}
 .login__page-title {
   margin-bottom: 5rem;
   font-weight: 600;
@@ -9349,6 +9395,47 @@ body {
   }
   .login--reg button.calculate__btn > svg {
     margin-left: 5rem;
+  }
+  .login--restore .login__content {
+    width: 100%;
+    padding: 0 5rem;
+  }
+  .login--restore .login__title {
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    line-height: 6.4rem;
+  }
+  .login--restore .login__sub-text {
+    margin-bottom: 6rem;
+    font-size: 3.4rem;
+    line-height: 5.1rem;
+  }
+  .login--restore .login__confirm-block {
+    margin: 12rem 0 6rem 0;
+  }
+  .login--restore .login__complete {
+    padding: 7rem 5rem 15rem 5rem;
+  }
+  .login--restore .complete__title {
+    margin-bottom: 3rem;
+  }
+  .login--restore .complete__text {
+    width: 100%;
+    margin-bottom: 12rem;
+    line-height: 5.1rem;
+  }
+  .login--restore .calculate__btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .login--restore .calculate__btn > svg {
+    margin-left: 4rem;
+  }
+  .login--new-pass .login__title {
+    margin-bottom: 6rem;
+    font-size: 5rem;
   }
   .login__page-title {
     margin-bottom: 6rem;

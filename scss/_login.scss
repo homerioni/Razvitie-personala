@@ -14,6 +14,66 @@
     }
   }
 
+  &--restore {
+    .login__title {
+      margin-bottom: 1rem;
+      font-size: 4.4rem;
+    }
+
+    .login__sub-text {
+      margin-bottom: 3.5rem;
+      font-size: 2.5rem;
+      line-height: 3.2rem;
+      text-align: center;
+    }
+
+    .login__confirm-block {
+      margin: 5rem 0 2rem 0;
+    }
+
+    .login__complete {
+      padding: 7rem 12rem 24rem 12rem;
+    }
+
+    .complete__title {
+      margin-bottom: 1rem;
+    }
+
+    .complete__text {
+      width: 59rem;
+      margin-bottom: 7.5rem;
+      line-height: 3.2rem;
+    }
+
+    .calculate__btn {
+      justify-content: center;
+      margin: 0 auto;
+
+      > svg {
+        margin-left: 4rem;
+      }
+    }
+  }
+
+  &--new-pass {
+    .login__title {
+      margin-bottom: 3.5rem;
+      font-size: 4.4rem;
+    }
+
+    .calculate__btn {
+      padding: 0 3rem;
+
+      > svg {
+        margin-left: 2rem;
+      }
+    }
+
+    .login__confirm-block {
+      margin-bottom: 0;
+    }
+  }
+
   &__page-title {
     margin-bottom: 5rem;
     font-weight: 600;
@@ -128,6 +188,59 @@
         > svg {
           margin-left: 5rem;
         }
+      }
+    }
+
+    &--restore {
+      .login__content {
+        width: 100%;
+        padding: 0 5rem;
+      }
+
+      .login__title {
+        margin-bottom: 3rem;
+        font-size: 5rem;
+        line-height: 6.4rem;
+      }
+
+      .login__sub-text {
+        margin-bottom: 6rem;
+        font-size: 3.4rem;
+        line-height: 5.1rem;
+      }
+
+      .login__confirm-block {
+        margin: 12rem 0 6rem 0;
+      }
+
+      .login__complete {
+        padding: 7rem 5rem 15rem 5rem;
+      }
+
+      .complete__title {
+        margin-bottom: 3rem;
+      }
+
+      .complete__text {
+        width: 100%;
+        margin-bottom: 12rem;
+        line-height: 5.1rem;
+      }
+
+      .calculate__btn {
+        justify-content: center;
+        margin: 0 auto;
+
+        > svg {
+          margin-left: 4rem;
+        }
+      }
+    }
+
+    &--new-pass {
+      .login__title {
+        margin-bottom: 6rem;
+        font-size: 5rem;
       }
     }
 
