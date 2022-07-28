@@ -18,7 +18,6 @@ $(document).ready(function () {
     });
 
     // Маски для input
-    $('.input-phone').mask('+7 (999) 999-99-99');
     $('.mask-snils').mask('999-999-999 99');
     $('.mask-diplom').mask('999999 9999999');
 
@@ -237,6 +236,12 @@ $(document).ready(function () {
     // Search
     $('.header__search-del').click(function () {
         $('.header__search-input').val('');
+    });
+
+    // Login
+    $('.complete-btn').click(function () {
+        $('.login__content').hide();
+        $('.complete').show();
     });
 
 });
