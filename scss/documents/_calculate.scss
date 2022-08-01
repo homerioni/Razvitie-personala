@@ -391,6 +391,10 @@
       }
     }
   }
+
+  &__complete {
+    padding: 6rem;
+  }
 }
 
 @media (max-width: 48em) {
@@ -644,6 +648,14 @@
       > svg {
         width: 3.6rem;
         height: 2.8rem;
+      }
+    }
+
+    &__complete {
+      padding: 6rem 0;
+
+      .complete__text {
+        line-height: 5.1rem;
       }
     }
   }

@@ -424,8 +424,8 @@
     <section class="calculate calculate--order">
         <div class="container">
             <div class="calculate__section-title">Оформление заказа</div>
-            <form class="calculate__form">
-                <div class="calculate__block">
+            <div class="calculate__form">
+                <form class="calculate__block">
                     <div class="calculate__title">Кто будет являться заказчиком? (плательщиком)</div>
                     <label class="calculate__item calculate__label-select">
                         <div class="calculate__input-name">Кем Вы являетесь?</div>
@@ -524,7 +524,7 @@
                         <span class="calculate__total-sum--bold">1 234 567 ₽</span>
                     </div>
                     <div class="calculate__confirm-block">
-                        <button class="calculate__btn">
+                        <button type="button" class="calculate__btn order-complete-btn">
                             <span>Отправить заявку</span>
                             <svg viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.5 7.5H1" stroke-width="2" stroke-linecap="round"/><path d="M18.5 1C18.5 1 19 3.36364 20.5 5C22.1874 6.84075 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/><path d="M18.5 14C18.5 14 19 11.6364 20.5 10C22.1874 8.15925 25 7.5 25 7.5" stroke-width="2" stroke-linecap="round"/>
@@ -540,8 +540,19 @@
                             <span>Согласие на обработку персональных данных</span>
                         </label>
                     </div>
+                </form>
+                <div class="calculate__complete complete">
+                    <div class="complete__title">Спасибо!</div>
+                    <div class="complete__img-box">
+                        <img src="img/login-complete-true.svg" alt="">
+                    </div>
+                    <div class="complete__text">
+                        <div>Оплата прошла успешно. Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.</div>
+                        <div class="complete__text--bold">Номер вашего заказа №12345</div>
+                    </div>
+                    <a href="#" class="complete__link">Посмотреть другие курсы</a>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 </main>

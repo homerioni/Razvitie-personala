@@ -238,4 +238,10 @@ $(document).ready(function () {
         $('.header__search-input').val('');
     });
 
+    // Login
+    $('.order-complete-btn').click(function () {
+        $('.calculate__block').hide();
+        $('.complete').show();
+    });
+
 });
