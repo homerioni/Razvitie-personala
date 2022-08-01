@@ -425,11 +425,6 @@ const news_slider = new Swiper('.news__slider', {
         nextEl: '.news__arrow-right',
         prevEl: '.news__arrow-left',
     },
-
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: true,
-    // },
 });
 
 let news_current_slide = $('.news__current-slide'),

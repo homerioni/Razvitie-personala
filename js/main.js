@@ -238,10 +238,4 @@ $(document).ready(function () {
         $('.header__search-input').val('');
     });
 
-    // Login
-    $('.complete-btn').click(function () {
-        $('.login__content').hide();
-        $('.complete').show();
-    });
-
 });
