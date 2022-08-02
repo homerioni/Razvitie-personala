@@ -127,11 +127,13 @@
     justify-content: center;
     width: 25.5rem;
     min-height: 6rem;
+    padding: 0 2rem;
     border-radius: 100rem;
     background-color: white;
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.3rem;
+    text-align: center;
     cursor: pointer;
 
     &:nth-child(n + 3) {
