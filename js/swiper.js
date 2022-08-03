@@ -14,6 +14,7 @@ let checkAnimPlay = false;
 const main_intro_slider = new Swiper('.main-intro__slider', {
     direction: 'horizontal',
     slidesPerView: 1,
+    spaceBetween: rem(4),
 
     pagination: {
         el: '.main-intro__pagination',
