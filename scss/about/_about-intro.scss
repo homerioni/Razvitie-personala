@@ -1,11 +1,11 @@
 @import "../param";
 
 .about-intro {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
   margin-top: 12rem;
 
   &--service {
-    margin-bottom: 12rem;
+    margin-bottom: 6rem;
 
     .about-intro__title-content {
       @media (min-width: 48.01em) {
@@ -16,6 +16,7 @@
 
     .about-intro__info-block {
       display: block;
+      margin-bottom: -2rem;
     }
 
     .about-intro__img-box {
@@ -38,7 +39,7 @@
   }
 
   &--service-page {
-    margin-bottom: 12rem;
+    margin-bottom: 6rem;
 
     .about-intro__img-box {
       order: 2;

@@ -3138,7 +3138,7 @@ body {
 }
 .more-center {
   position: relative;
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .more-center--main .more-center__img-box {
   width: 65rem;
@@ -3417,7 +3417,7 @@ body {
   }
 }
 .advantages {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .advantages__title {
   margin-bottom: 6rem;
@@ -4317,7 +4317,7 @@ body {
   }
 }
 .partners {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .partners__title-content {
   display: -webkit-box;
@@ -4674,11 +4674,11 @@ body {
   }
 }
 .about-intro {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
   margin-top: 12rem;
 }
 .about-intro--service {
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
 }
 @media (min-width: 48.01em) {
   .about-intro--service .about-intro__title-content {
@@ -4688,6 +4688,7 @@ body {
 }
 .about-intro--service .about-intro__info-block {
   display: block;
+  margin-bottom: -2rem;
 }
 .about-intro--service .about-intro__img-box {
   height: auto;
@@ -4712,7 +4713,7 @@ body {
   }
 }
 .about-intro--service-page {
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
 }
 .about-intro--service-page .about-intro__img-box {
   -webkit-box-ordinal-group: 3;
@@ -5556,7 +5557,7 @@ body {
   }
 }
 .partner-stages {
-  margin-bottom: 20rem;
+  margin-bottom: 8rem;
 }
 .partner-stages--four .partner-stages__item-bg-line {
   position: absolute;
@@ -5621,7 +5622,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 15rem;
+  margin-bottom: 6rem;
 }
 .partner-stages__item {
   position: relative;
@@ -5817,7 +5818,7 @@ body {
   }
 }
 .all-reviews {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .all-reviews__title-content {
   display: -webkit-box;
@@ -6326,7 +6327,7 @@ body {
   }
 }
 .documents {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .documents__title {
   margin-bottom: 6rem;
@@ -6341,7 +6342,7 @@ body {
   }
 }
 .documents__sub-title {
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
   font-weight: 600;
   font-size: 3rem;
   line-height: 4.5rem;
@@ -6355,7 +6356,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .documents__cards:last-child {
   margin-bottom: 0;
@@ -6419,7 +6420,8 @@ body {
      object-fit: contain;
 }
 .documents__text-block {
-  margin-left: 8rem;
+  margin: 0 auto;
+  padding-left: 8rem;
 }
 .documents__item-title {
   margin-bottom: 1rem;
@@ -6537,8 +6539,8 @@ body {
        object-fit: contain;
   }
   .documents__text-block {
-    margin-left: 0;
-    margin-top: -20rem;
+    margin: -20rem 0 0 0;
+    padding-left: 0;
   }
   .documents__item-title {
     margin-bottom: 6rem;
@@ -8032,7 +8034,7 @@ body {
   }
 }
 .service-desc {
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
 }
 .service-desc__cards {
   display: -webkit-box;
@@ -8417,7 +8419,7 @@ body {
   }
 }
 .dist-learning {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .dist-learning__content-block {
   display: -webkit-box;
@@ -8536,7 +8538,7 @@ body {
   }
 }
 .news {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .news__title-block {
   display: -webkit-box;
@@ -8813,7 +8815,7 @@ body {
   }
 }
 .course-page {
-  margin-bottom: 20rem;
+  margin-bottom: 6rem;
 }
 .course-page__title {
   margin-bottom: 5rem;
