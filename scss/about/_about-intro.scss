@@ -37,6 +37,19 @@
     }
   }
 
+  &--service-page {
+    margin-bottom: 12rem;
+
+    .about-intro__img-box {
+      order: 2;
+      margin: 0;
+    }
+
+    .about-intro__title-content {
+      width: 80rem;
+    }
+  }
+
   &__info-block {
     display: flex;
     justify-content: space-between;

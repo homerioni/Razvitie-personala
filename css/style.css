@@ -4711,6 +4711,18 @@ body {
        object-fit: cover;
   }
 }
+.about-intro--service-page {
+  margin-bottom: 12rem;
+}
+.about-intro--service-page .about-intro__img-box {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0;
+}
+.about-intro--service-page .about-intro__title-content {
+  width: 80rem;
+}
 .about-intro__info-block {
   display: -webkit-box;
   display: -ms-flexbox;

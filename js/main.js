@@ -228,8 +228,10 @@ $(document).ready(function () {
         contentHeight = $('.about-intro').height();
         if ($(window).width() > 768) {
             $('.about-intro__img-box').css('max-height', contentHeight + 'px');
+            $('.about-intro__img-box img').css('max-height', contentHeight + 'px');
         } else {
             $('.about-intro__img-box').css('max-height', 'auto');
+            $('.about-intro__img-box img').css('max-height', 'auto');
         }
     });
 
