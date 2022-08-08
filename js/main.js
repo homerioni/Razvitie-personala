@@ -222,8 +222,10 @@ $(document).ready(function () {
 
     // img for about-intro--service
     let contentHeight = $('.about-intro').height();
-    $('.about-intro__img-box').css('max-height', contentHeight + 'px');
-    $('.about-intro__img-box img').css('max-height', contentHeight + 'px');
+    if ($(window).width() > 768) {
+        $('.about-intro__img-box').css('max-height', contentHeight + 'px');
+        $('.about-intro__img-box img').css('max-height', contentHeight + 'px');
+    }
 
     $(window).resize(function () {
         contentHeight = $('.about-intro').height();
