@@ -9,13 +9,14 @@
 
     .about-intro__title-content {
       @media (min-width: 48.01em) {
-        display: block;
-        width: 100%;
+        //display: block;
+        //width: 100%;
+        flex: auto;
       }
     }
 
     .about-intro__info-block {
-      display: block;
+      //display: block;
       margin-bottom: -2rem;
     }
 
@@ -29,7 +30,9 @@
         align-items: center;
         width: 66rem;
         margin: 0 0 2rem 2rem;
-        float: right;
+        //float: right;
+        order: 2;
+        flex: none;
 
         > img {
           object-fit: cover;

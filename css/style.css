@@ -4682,12 +4682,12 @@ body {
 }
 @media (min-width: 48.01em) {
   .about-intro--service .about-intro__title-content {
-    display: block;
-    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
   }
 }
 .about-intro--service .about-intro__info-block {
-  display: block;
   margin-bottom: -2rem;
 }
 .about-intro--service .about-intro__img-box {
@@ -4705,7 +4705,12 @@ body {
             align-items: center;
     width: 66rem;
     margin: 0 0 2rem 2rem;
-    float: right;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
   .about-intro--service .about-intro__img-box > img {
     -o-object-fit: cover;

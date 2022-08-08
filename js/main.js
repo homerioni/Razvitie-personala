@@ -225,6 +225,10 @@ $(document).ready(function () {
     if ($(window).width() > 768) {
         $('.about-intro__img-box').css('max-height', contentHeight + 'px');
         $('.about-intro__img-box img').css('max-height', contentHeight + 'px');
+
+        contentHeight = $('.about-intro__title-content').height();
+        $('.about-intro--service .about-intro__img-box').css('max-height', contentHeight + rem(15) + 'px');
+        $('.about-intro--service .about-intro__img-box img').css('max-height', contentHeight + rem(15) + 'px');
     }
 
     $(window).resize(function () {
@@ -232,6 +236,10 @@ $(document).ready(function () {
         if ($(window).width() > 768) {
             $('.about-intro__img-box').css('max-height', contentHeight + 'px');
             $('.about-intro__img-box img').css('max-height', contentHeight + 'px');
+
+            contentHeight = $('.about-intro__title-content').height();
+            $('.about-intro--service .about-intro__img-box').css('max-height', contentHeight + rem(15) + 'px');
+            $('.about-intro--service .about-intro__img-box img').css('max-height', contentHeight + rem(15) + 'px');
         } else {
             $('.about-intro__img-box').css('max-height', 'auto');
             $('.about-intro__img-box img').css('max-height', 'auto');
