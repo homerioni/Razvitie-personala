@@ -4704,7 +4704,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 66rem;
-    margin: 0 0 10rem 2rem;
+    margin: 0 0 2rem 2rem;
     float: right;
   }
   .about-intro--service .about-intro__img-box > img {
@@ -5466,6 +5466,8 @@ body {
   width: 47rem;
   height: 60rem;
   margin-right: 1.5rem;
+  border-radius: 0 0 0 2.5rem;
+  overflow: hidden;
 }
 .team__img-box > img {
   width: 100%;
