@@ -45,7 +45,7 @@
     margin-bottom: 6rem;
 
     .about-intro__img-box {
-      order: 2;
+      order: 1;
       margin: 0;
 
       > img {
@@ -54,6 +54,7 @@
     }
 
     .about-intro__title-content {
+      order: 2;
       width: 80rem;
     }
   }
