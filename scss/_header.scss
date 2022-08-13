@@ -365,11 +365,16 @@
     background-color: #fff;
     overflow: scroll;
     transition: 0.5s ease-in-out;
+    transform: translateZ(0);
   }
 
   &__services-item {
     &:nth-child(n + 2) {
       border-top: 1px solid #C7CBDA;
+    }
+
+    &:hover {
+      background-color: #f5f5f5;
     }
   }
 

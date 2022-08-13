@@ -2,8 +2,8 @@
 
 .reviews {
   position: relative;
-  margin-bottom: 20rem;
-  margin-top: 30rem;
+  margin-bottom: 6rem;
+  margin-top: 10rem;
 
   &__bg {
     position: absolute;
@@ -140,6 +140,15 @@
         fill: $red;
       }
     }
+
+    &:hover {
+      color: $red-hover;
+
+      path {
+        stroke: $red-hover;
+        fill: $red-hover;
+      }
+    }
   }
 
   &__slider {
@@ -240,6 +249,10 @@
         stroke: white;
         fill: white;
       }
+    }
+
+    &:hover {
+      background-color: $blue-hover;
     }
   }
 

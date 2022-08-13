@@ -59,6 +59,12 @@ body.lock {
   user-select: none;
 }
 
+svg.active {
+  path {
+    fill: $blue;
+  }
+}
+
 @media (min-width: 48.01em) {
   .mobile {
     display: none;

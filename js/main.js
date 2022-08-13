@@ -257,4 +257,12 @@ $(document).ready(function () {
         $('.complete').show();
     });
 
+    // Inputs focus - svg change
+    $('input').focusin(function () {
+        $(this).parent().find('svg').addClass('active');
+    });
+    $('input').focusout(function () {
+        $(this).parent().find('svg').removeClass('active');
+    });
+
 });

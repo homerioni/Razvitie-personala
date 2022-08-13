@@ -115,6 +115,10 @@
         stroke: white;
       }
     }
+
+    &:hover {
+      background-color: $blue-hover;
+    }
   }
 
   &__link {
