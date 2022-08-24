@@ -419,6 +419,10 @@
     font-size: 1.8rem;
     line-height: 2.3rem;
     color: $gray;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   &__services-sub-item-link {

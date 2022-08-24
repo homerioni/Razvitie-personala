@@ -81,6 +81,7 @@
   }
 
   &__content-bg {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 7rem 0;
@@ -160,8 +161,17 @@
     margin: 0 auto;
     font-size: 1.8rem;
     line-height: 5.2rem;
-    color: $red;
+    color: $gray;
     text-decoration: underline;
+  }
+
+  &__back-link {
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+    text-decoration: none;
+    border-bottom: 1px solid $gray;
+    line-height: 2rem;
   }
 
   &__sub-text {
@@ -312,6 +322,9 @@
     &__forgot {
       font-size: 3.4rem;
       line-height: 4.3rem;
+    }
+
+    &__back-link {
     }
 
     &__sub-text {

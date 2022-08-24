@@ -126,7 +126,7 @@
     font-size: 1.8rem;
     line-height: 2.7rem;
     text-decoration: underline;
-    color: $red;
+    color: $gray;
   }
 
   &__list {
@@ -149,7 +149,7 @@
 
 @media (max-width: 48em) {
   .more-center {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
     padding-top: 10rem;
 
     &--main {

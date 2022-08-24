@@ -34,7 +34,7 @@
 
     &--link {
       text-decoration: underline;
-      color: $red;
+      color: $gray;
     }
 
     &--block {
@@ -85,7 +85,7 @@
 
 @media (max-width: 48em) {
   .about-content {
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
     text-align: left;
 
     &--limited {

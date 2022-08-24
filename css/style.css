@@ -164,16 +164,20 @@ input[type=number] {
           align-items: center;
 }
 .page-pagination__page {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.9rem;
   text-transform: uppercase;
 }
 .page-pagination__page--old {
+  color: #9AA0B5;
+}
+.page-pagination__page--old:hover {
   color: #757988;
 }
 .page-pagination__page--current {
-  color: #CD010C;
+  font-weight: 700;
+  color: #757988;
 }
 .page-pagination__arrow {
   width: 1rem;
@@ -810,6 +814,9 @@ input[type=number] {
   font-size: 1.8rem;
   line-height: 2.3rem;
   color: #757988;
+}
+.header__services-sub-item:hover {
+  color: #0E62C4;
 }
 .header__search-form {
   display: -webkit-box;
@@ -2252,7 +2259,7 @@ body {
 
 @media (max-width: 48em) {
   .main-intro {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
     margin-top: 5rem;
   }
   .main-intro__container {
@@ -2671,7 +2678,7 @@ body {
 
 @media (max-width: 48em) {
   .prog-study {
-    margin-bottom: 28rem;
+    margin-bottom: 12rem;
   }
   .prog-study__title-content {
     -webkit-box-orient: vertical;
@@ -3034,7 +3041,7 @@ body {
 
 @media (max-width: 48em) {
   .offers {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .offers__title-content {
     -webkit-box-orient: vertical;
@@ -3325,7 +3332,7 @@ body {
   font-size: 1.8rem;
   line-height: 2.7rem;
   text-decoration: underline;
-  color: #CD010C;
+  color: #757988;
 }
 .more-center__list {
   margin-bottom: 0;
@@ -3344,7 +3351,7 @@ body {
 
 @media (max-width: 48em) {
   .more-center {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
     padding-top: 10rem;
   }
   .more-center--main .more-center__img-box {
@@ -3562,7 +3569,7 @@ body {
 
 @media (max-width: 48em) {
   .advantages {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .advantages__title {
     margin-bottom: 14rem;
@@ -3807,7 +3814,7 @@ body {
 
 @media (max-width: 48em) {
   .feedback {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .feedback__content-block {
     -webkit-box-orient: vertical;
@@ -3919,7 +3926,8 @@ body {
 .reviews {
   position: relative;
   margin-bottom: 6rem;
-  margin-top: 10rem;
+  padding-top: 4rem;
+  overflow: hidden;
 }
 .reviews__bg {
   position: absolute;
@@ -4201,7 +4209,9 @@ body {
 
 @media (max-width: 48em) {
   .reviews {
-    margin-bottom: 20rem;
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+    padding-top: 0;
     padding-bottom: 10rem;
   }
   .reviews__bg {
@@ -4460,7 +4470,7 @@ body {
 }
 @media (max-width: 48em) {
   .partners {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .partners__title-content {
     -webkit-box-orient: vertical;
@@ -4961,7 +4971,7 @@ body {
 
 @media (max-width: 48em) {
   .about-intro {
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
     margin-top: 0;
   }
   .about-intro--service {
@@ -5114,7 +5124,7 @@ body {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.7rem;
-  color: #CD010C;
+  color: #757988;
 }
 .boss__title {
   margin-bottom: 3.3rem;
@@ -5177,7 +5187,7 @@ body {
 
 @media (max-width: 48em) {
   .boss {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .boss__content-block {
     -webkit-box-orient: vertical;
@@ -5335,10 +5345,10 @@ body {
   color: white;
 }
 .about-numbers__number {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
-  font-size: 3.6rem;
-  line-height: 4.5rem;
+  font-size: 5.5rem;
+  line-height: 5rem;
   color: #CD010C;
 }
 .about-numbers__text {
@@ -5350,7 +5360,7 @@ body {
 
 @media (max-width: 48em) {
   .about-numbers {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .about-numbers__title {
     margin-bottom: 10rem;
@@ -5381,8 +5391,8 @@ body {
     line-height: 5.4rem;
   }
   .about-numbers__number {
-    margin-bottom: 6rem;
-    font-size: 7.2rem;
+    margin-bottom: 4rem;
+    font-size: 10rem;
     line-height: 9rem;
   }
   .about-numbers__text {
@@ -5427,7 +5437,7 @@ body {
 }
 .about-content__text--link {
   text-decoration: underline;
-  color: #CD010C;
+  color: #757988;
 }
 .about-content__text--block {
   display: block;
@@ -5473,7 +5483,7 @@ body {
 
 @media (max-width: 48em) {
   .about-content {
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
     text-align: left;
   }
   .about-content--limited {
@@ -5587,7 +5597,7 @@ body {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.7rem;
-  color: #CD010C;
+  color: #757988;
 }
 .team__item-title {
   margin-bottom: 3.8rem;
@@ -5602,7 +5612,7 @@ body {
 
 @media (max-width: 48em) {
   .team {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .team__title {
     margin-bottom: 10rem;
@@ -5825,7 +5835,7 @@ body {
 
 @media (max-width: 48em) {
   .partner-stages {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .partner-stages--five .partner-stages__cards {
     padding: 5rem 0 5rem 4rem;
@@ -6161,7 +6171,7 @@ body {
 
 @media (max-width: 48em) {
   .all-reviews {
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
   }
   .all-reviews__title-content {
     -webkit-box-orient: vertical;
@@ -6389,7 +6399,7 @@ body {
 
 @media (max-width: 48em) {
   .review-page {
-    margin-bottom: 20rem;
+    margin-bottom: 12rem;
   }
   .review-page__title {
     margin-bottom: 6rem;
@@ -6578,7 +6588,7 @@ body {
 
 @media (max-width: 48em) {
   .documents {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .documents__sub-title {
     margin-bottom: 42rem;
@@ -7076,7 +7086,7 @@ body {
 
 @media (max-width: 48em) {
   .calculate {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .calculate--order .calculate__label-select {
     margin-bottom: 6rem;
@@ -7374,7 +7384,7 @@ body {
 
 @media (max-width: 48em) {
   .train-req {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .train-req__title {
     margin-bottom: 14rem;
@@ -7883,7 +7893,7 @@ body {
 
 @media (max-width: 48em) {
   .services {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .services__title {
     margin-bottom: 6rem;
@@ -8261,7 +8271,7 @@ body {
 
 @media (max-width: 48em) {
   .service-desc {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .service-desc__cards {
     -webkit-box-orient: vertical;
@@ -8468,7 +8478,7 @@ body {
 
 @media (max-width: 48em) {
   .courses {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .courses__title-block {
     -webkit-box-orient: vertical;
@@ -8568,7 +8578,7 @@ body {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.7rem;
-  color: #CD010C;
+  color: #757988;
 }
 .dist-learning__title {
   width: 70rem;
@@ -8593,7 +8603,7 @@ body {
 
 @media (max-width: 48em) {
   .dist-learning {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .dist-learning__content-block {
     -webkit-box-orient: vertical;
@@ -8752,7 +8762,7 @@ body {
 
 @media (max-width: 48em) {
   .news {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .news__title-block {
     -webkit-box-orient: vertical;
@@ -8883,7 +8893,7 @@ body {
 
 @media (max-width: 48em) {
   .service-article {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .service-article__block {
     -webkit-box-orient: vertical;
@@ -9040,6 +9050,9 @@ body {
 }
 
 @media (max-width: 48em) {
+  .course-page {
+    margin-bottom: 12rem;
+  }
   .course-page__title {
     margin-bottom: 6rem;
     font-size: 6rem;
@@ -9124,7 +9137,7 @@ body {
   font-size: 1.8rem;
   line-height: 2.7rem;
   text-decoration: underline;
-  color: #CD010C;
+  color: #757988;
 }
 .cart__cards {
   margin-bottom: 4rem;
@@ -9502,6 +9515,7 @@ body {
   font-size: 5.5rem;
 }
 .login__content-bg {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9579,8 +9593,16 @@ body {
   margin: 0 auto;
   font-size: 1.8rem;
   line-height: 5.2rem;
-  color: #CD010C;
+  color: #757988;
   text-decoration: underline;
+}
+.login__back-link {
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+  text-decoration: none;
+  border-bottom: 1px solid #757988;
+  line-height: 2rem;
 }
 .login__sub-text {
   margin-bottom: 6rem;
@@ -9980,7 +10002,7 @@ body {
 
 @media (max-width: 48em) {
   .personal {
-    margin-bottom: 32rem;
+    margin-bottom: 12rem;
   }
   .personal__title {
     margin-bottom: 12rem;
