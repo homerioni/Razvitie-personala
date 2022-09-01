@@ -165,11 +165,11 @@
 .up-btn {
   display: none;
   position: fixed;
-  left: 7rem;
+  left: 14rem;
   top: 15rem;
   z-index: 9;
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 100%;
   border: 1px solid $gray-light;
 
@@ -177,8 +177,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 3.4rem;
+    height: 3.4rem;
     transform: translate(-50%, -50%) rotate(180deg);
 
     path {
@@ -193,6 +193,18 @@
     > svg path {
       fill: $gray;
       stroke: $gray;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    left: 6.5rem;
+    top: 15rem;
+    width: 10rem;
+    height: 10rem;
+
+    > svg {
+      width: 3rem;
+      height: 3rem;
     }
   }
 }
