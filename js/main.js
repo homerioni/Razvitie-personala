@@ -265,4 +265,13 @@ $(document).ready(function () {
         $(this).parent().find('svg').removeClass('active');
     });
 
+    // up-btn
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 600) {
+            $('.up-btn').fadeIn(200);
+        } else {
+            $('.up-btn').fadeOut(200);
+        }
+    });
+
 });

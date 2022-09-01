@@ -343,6 +343,38 @@ input[type=number] {
      object-fit: contain;
 }
 
+.up-btn {
+  display: none;
+  position: fixed;
+  left: 7rem;
+  top: 15rem;
+  z-index: 9;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  border: 1px solid #9EA3B6;
+}
+.up-btn > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+          transform: translate(-50%, -50%) rotate(180deg);
+}
+.up-btn > svg path {
+  fill: #9EA3B6;
+  stroke: #9EA3B6;
+}
+.up-btn:hover {
+  border: 1px solid #757988;
+}
+.up-btn:hover > svg path {
+  fill: #757988;
+  stroke: #757988;
+}
+
 @media (max-width: 48em) {
   .page-pagination {
     margin: 6rem 0;
@@ -393,6 +425,28 @@ input[type=number] {
     width: 90%;
     height: auto;
     max-width: none;
+  }
+
+  .up-btn {
+    left: 4rem;
+    top: 10rem;
+    width: 12rem;
+    height: 12rem;
+    border: none;
+    background-color: white;
+    -webkit-box-shadow: 0 0.6rem 3rem 1rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.6rem 3rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .up-btn > svg {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  .up-btn > svg path {
+    fill: #757988;
+    stroke: #757988;
+  }
+  .up-btn:hover {
+    border: none;
   }
 }
 .header__block {
@@ -1264,11 +1318,11 @@ input[type=number] {
 body {
   min-height: 100vh;
   position: relative;
-  padding-bottom: 36.4rem;
+  padding-bottom: 44rem;
 }
 @media (max-width: 48em) {
   body {
-    padding-bottom: 203.2rem;
+    padding-bottom: 213.5rem;
   }
 }
 
@@ -10186,6 +10240,10 @@ body {
     line-height: 4rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../img/background.svg");
   background-size: cover;

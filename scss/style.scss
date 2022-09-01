@@ -44,6 +44,10 @@
 @import "header-ma";
 @import "personal";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../img/background.svg");
   background-size: cover;
