@@ -294,7 +294,7 @@
       margin-top: 2.5rem;
     }
 
-    > img {
+    > img, picture, picture > img {
       width: 8.8rem;
       height: 5rem;
       object-fit: contain;
@@ -590,7 +590,7 @@
         margin-top: 3rem;
       }
 
-      > img {
+      > img, picture, picture > img {
         width: 10.6rem;
         height: 6rem;
       }

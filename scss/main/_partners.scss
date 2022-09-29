@@ -40,7 +40,7 @@
     background-color: #fff;
     overflow: hidden;
 
-    > img {
+    > img, picture, picture > img {
       width: 20rem;
       height: 7.5rem;
       object-fit: contain;
@@ -100,7 +100,7 @@
       border-radius: 6rem;
       backdrop-filter: blur(10px);
 
-      > img {
+      > img, picture, picture > img {
         width: 40rem;
         height: 15rem;
       }

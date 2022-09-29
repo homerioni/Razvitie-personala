@@ -11,7 +11,7 @@
       border-radius: 0 0 0 12.5rem;
       overflow: hidden;
 
-      > img {
+      > img, picture, picture > img {
         object-fit: cover;
       }
     }
@@ -43,7 +43,7 @@
     width: 67.2rem;
     height: 43.6rem;
 
-    > img {
+    > img, picture, picture > img {
       width: 100%;
       height: 100%;
       object-fit: contain;

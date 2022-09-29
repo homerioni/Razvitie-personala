@@ -19,7 +19,7 @@
     margin-top: -1.3rem;
     margin-right: 5rem;
 
-    > img {
+    > img, picture, picture > img {
       width: 100%;
       height: 100%;
       object-fit: contain;

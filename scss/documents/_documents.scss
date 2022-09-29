@@ -61,7 +61,7 @@
     width: 100%;
     height: 100%;
 
-    > img {
+    > img, picture, picture > img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -75,7 +75,7 @@
     width: 34rem;
     height: 34rem;
 
-    > img {
+    > img, picture, picture > img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -183,7 +183,7 @@
     &__img-bg {
       height: 30rem;
 
-      > img {
+      > img, picture, picture > img {
         object-fit: cover;
         object-position: bottom;
       }
@@ -196,7 +196,7 @@
       width: 60rem;
       height: 60rem;
 
-      > img {
+      > img, picture, picture > img {
         width: 100%;
         height: 100%;
         object-fit: contain;
